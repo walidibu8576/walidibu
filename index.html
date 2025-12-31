@@ -11,7 +11,6 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            -webkit-tap-highlight-color: transparent;
         }
 
         :root {
@@ -36,14 +35,11 @@
             color: var(--dark);
             min-height: 100vh;
             padding: 20px;
-            overflow-x: hidden;
-            -webkit-text-size-adjust: 100%;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            position: relative;
         }
 
         header {
@@ -55,8 +51,6 @@
             margin-bottom: 30px;
             text-align: center;
             position: relative;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         .teacher-mode {
@@ -73,7 +67,6 @@
             align-items: center;
             gap: 8px;
             border: none;
-            touch-action: manipulation;
         }
 
         .tingkatan-toggle {
@@ -98,9 +91,6 @@
             transition: all 0.3s ease;
             flex: 1;
             min-width: 150px;
-            touch-action: manipulation;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         .tingkatan-btn.active {
@@ -120,15 +110,11 @@
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         header p {
             font-size: 1.1rem;
             opacity: 0.9;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         .main-content {
@@ -168,28 +154,17 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         .card.tingkatan4 h2 {
             color: var(--tingkatan4);
         }
 
-        .card h2 i {
-            color: var(--accent);
-        }
-
-        .card.tingkatan4 h2 i {
-            color: #ff4081;
-        }
-
-        /* Mata Pelajaran Styles */
+        /* Mata Pelajaran */
         .subjects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
             gap: 15px;
-            touch-action: manipulation;
         }
 
         .subject-card {
@@ -201,9 +176,6 @@
             transition: all 0.3s ease;
             border: 2px solid transparent;
             position: relative;
-            -webkit-user-select: none;
-            user-select: none;
-            touch-action: manipulation;
         }
 
         .subject-card:hover {
@@ -221,10 +193,6 @@
             background: linear-gradient(145deg, #ffeef4, #ffdbe9);
         }
 
-        .subject-card.tingkatan4:hover {
-            border-color: #ff4081;
-        }
-
         .subject-icon {
             font-size: 2rem;
             margin-bottom: 10px;
@@ -238,48 +206,7 @@
             color: var(--tingkatan4);
         }
 
-        .subject-name {
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .tingkatan-label {
-            display: inline-block;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 5px;
-            vertical-align: middle;
-        }
-
-        .tingkatan-label.tingkatan3 {
-            background-color: var(--tingkatan3);
-            color: white;
-        }
-
-        .tingkatan-label.tingkatan4 {
-            background-color: var(--tingkatan4);
-            color: white;
-        }
-
-        /* Nota Indicator on Subject Card */
-        .note-indicator {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            width: 8px;
-            height: 8px;
-            background-color: var(--note);
-            border-radius: 50%;
-            display: none;
-        }
-
-        .note-indicator.has-note {
-            display: block;
-        }
-
-        /* Timer Styles */
+        /* Timer */
         .timer-container {
             background: linear-gradient(135deg, var(--secondary), var(--primary));
             color: white;
@@ -289,10 +216,6 @@
             margin-bottom: 25px;
         }
 
-        .timer-container.tingkatan4 {
-            background: linear-gradient(135deg, #c2185b, #e91e63);
-        }
-
         .timer-display {
             font-size: 3.5rem;
             font-weight: 700;
@@ -300,41 +223,9 @@
             letter-spacing: 2px;
             margin: 10px 0;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            -webkit-user-select: none;
-            user-select: none;
         }
 
-        .progress-container {
-            margin: 20px 0;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 10px;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background: linear-gradient(to right, var(--primary), var(--accent));
-            width: 0%;
-            transition: width 0.5s ease;
-        }
-
-        .progress-fill.tingkatan4 {
-            background: linear-gradient(to right, #e91e63, #ff4081);
-        }
-
-        .progress-text {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-            font-size: 0.9rem;
-            color: white;
-        }
-
+        /* Buttons */
         .btn {
             padding: 12px 25px;
             border: none;
@@ -347,13 +238,6 @@
             justify-content: center;
             gap: 8px;
             font-size: 1rem;
-            touch-action: manipulation;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .btn:active {
-            transform: scale(0.98);
         }
 
         .btn-primary {
@@ -365,21 +249,9 @@
             background-color: #3a56d4;
         }
 
-        .btn-primary.tingkatan4 {
-            background-color: var(--tingkatan4);
-        }
-
-        .btn-primary.tingkatan4:hover {
-            background-color: #c2185b;
-        }
-
         .btn-success {
             background-color: var(--success);
             color: white;
-        }
-
-        .btn-success:hover {
-            background-color: #27ae60;
         }
 
         .btn-danger {
@@ -387,60 +259,18 @@
             color: white;
         }
 
-        .btn-danger:hover {
-            background-color: #c0392b;
-        }
-
         .btn-teacher {
             background-color: var(--teacher);
             color: white;
         }
 
-        .btn-teacher:hover {
-            background-color: #7b1fa2;
-        }
-
-        .btn-answer {
-            background-color: var(--answer);
-            color: white;
-        }
-
-        .btn-answer:hover {
-            background-color: #f39c12;
-        }
-
-        .btn-note {
-            background-color: var(--note);
-            color: white;
-        }
-
-        .btn-note:hover {
-            background-color: #27ae60;
-        }
-
-        .btn-archive {
-            background-color: var(--archive);
-            color: white;
-        }
-
-        .btn-archive:hover {
-            background-color: #545b62;
-        }
-
-        /* Soalan Styles */
+        /* Soalan */
         .question-container {
             background-color: #f8f9fa;
             border-radius: 10px;
             padding: 25px;
             margin-bottom: 25px;
             position: relative;
-        }
-
-        .question-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 15px;
         }
 
         .question-number {
@@ -452,12 +282,6 @@
             border-radius: 50%;
             text-align: center;
             line-height: 35px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .question-number.tingkatan4 {
-            background-color: var(--tingkatan4);
         }
 
         .question-date {
@@ -467,373 +291,71 @@
             padding: 5px 10px;
             border-radius: 15px;
             font-weight: 500;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
-        .question-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-            white-space: pre-line;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
+        /* Jadual dalam Soalan */
+        .question-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .question-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+            background-color: white;
+        }
+
+        .question-table tr:hover td {
+            background-color: #f5f5f5;
+        }
+
+        /* Gambar dalam Soalan */
+        .question-image-container {
+            margin: 15px 0;
+            text-align: center;
         }
 
         .question-image {
             max-width: 100%;
-            max-height: 300px;
+            max-height: 400px;
             border-radius: 10px;
-            margin: 15px 0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        /* Date Filter Section */
-        .date-filter-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            border: 1px solid #e9ecef;
-        }
-
-        .date-filter-section h4 {
-            color: var(--primary);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .date-filter-controls {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .date-input {
-            padding: 10px 15px;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            flex: 1;
-            min-width: 150px;
-            touch-action: manipulation;
-        }
-
-        /* Ruang Nota Styles */
-        .note-section {
-            margin-top: 25px;
-            padding: 20px;
-            background-color: #f0f9f0;
-            border-radius: 10px;
-            border-left: 4px solid var(--note);
-            border: 1px solid #d4edda;
-        }
-
-        .note-section h3 {
-            color: var(--note);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .note-content {
-            padding: 15px;
-            background-color: white;
-            border-radius: 8px;
-            border: 1px solid #e8f5e8;
-            min-height: 80px;
-            line-height: 1.6;
-            white-space: pre-line;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .note-content.readonly {
-            background-color: #f8f9fa;
-            border: 1px solid #e9ecef;
-            cursor: default;
-        }
-
-        .note-content.editable {
-            min-height: 150px;
-            resize: vertical;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 1rem;
-            padding: 12px;
-            border: 2px solid #c3e6cb;
-            touch-action: manipulation;
-        }
-
-        .note-content.editable:focus {
-            outline: none;
-            border-color: var(--note);
-        }
-
-        .note-actions {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-
-        .no-note-message {
-            color: #6c757d;
-            font-style: italic;
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border: 2px dashed #dee2e6;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        /* Ruang Jawapan */
-        .answer-section {
-            margin-top: 25px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
-        }
-
-        .answer-section h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .answer-section.tingkatan4 h3 {
-            color: var(--tingkatan4);
-        }
-
-        .answer-area {
-            width: 100%;
-            min-height: 150px;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            resize: vertical;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            touch-action: manipulation;
-        }
-
-        .answer-area:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .answer-area.tingkatan4:focus {
-            border-color: #ff4081;
-        }
-
-        /* Untuk Matematik - dua ruang jawapan */
-        .math-extra-answer {
-            margin-top: 20px;
-        }
-
-        .math-extra-answer h4 {
-            color: var(--secondary);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        /* Simbol Matematik Styles */
-        .math-symbols {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 15px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-            touch-action: manipulation;
-        }
-
-        .symbol-btn {
-            width: 45px;
-            height: 45px;
-            background-color: white;
-            border: 2px solid #ddd;
-            border-radius: 8px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            touch-action: manipulation;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .symbol-btn:hover {
-            background-color: var(--primary);
-            color: white;
-            border-color: var(--primary);
-            transform: translateY(-2px);
-        }
-
-        .symbol-btn:active {
-            transform: translateY(0);
-        }
-
-        .symbol-section {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #eee;
-        }
-
-        .symbol-section h4 {
-            margin-bottom: 10px;
-            color: var(--primary);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .clear-buttons {
-            margin-top: 10px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-sm {
-            padding: 8px 15px;
-            font-size: 0.9rem;
-        }
-
-        /* Jawapan untuk Mod Guru */
-        .teacher-answer-section {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #fffde7;
-            border-radius: 10px;
-            border-left: 4px solid var(--answer);
-        }
-
-        .teacher-answer-section h4 {
-            color: var(--answer);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .teacher-answer-content {
-            padding: 10px;
-            background-color: white;
-            border-radius: 5px;
-            border: 1px solid #eee;
-            white-space: pre-line;
-            line-height: 1.6;
-            word-wrap: break-word;
-            overflow-wrap: break-word;
-        }
-
-        .teacher-answer-content img {
-            max-width: 100%;
-            max-height: 300px;
-            border-radius: 8px;
             margin: 10px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* Archive Section */
-        .archive-section {
-            margin-top: 25px;
-            padding: 20px;
-            background-color: #f8f9fa;
+        .image-upload-container {
+            border: 2px dashed #ddd;
             border-radius: 10px;
-            border: 2px solid #e9ecef;
-        }
-
-        .archive-section h3 {
-            color: var(--archive);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .archive-list {
-            max-height: 300px;
-            overflow-y: auto;
-            margin-top: 15px;
-            touch-action: manipulation;
-        }
-
-        .archive-item {
-            padding: 12px 15px;
-            background-color: white;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--archive);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            touch-action: manipulation;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .archive-item:hover {
-            background-color: #f8f9fa;
-            transform: translateX(5px);
-        }
-
-        .archive-item.selected {
-            background-color: #e9ecef;
-            border-left-color: var(--primary);
-        }
-
-        .archive-date {
-            font-weight: 600;
-            color: var(--dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .archive-count {
-            font-size: 0.85rem;
-            color: #6c757d;
-            margin-left: auto;
-        }
-
-        .no-archive-message {
-            color: #6c757d;
-            font-style: italic;
+            padding: 20px;
             text-align: center;
-            padding: 30px;
-            background-color: #f8f9fa;
-            border-radius: 8px;
-            border: 2px dashed #dee2e6;
-            -webkit-user-select: none;
-            user-select: none;
+            margin: 15px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        /* Modal Styles */
+        .image-upload-container:hover {
+            border-color: var(--primary);
+            background-color: #f8f9fa;
+        }
+
+        .image-upload-container.dragover {
+            border-color: var(--success);
+            background-color: #e8f5e9;
+        }
+
+        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -843,7 +365,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 2000;
-            touch-action: manipulation;
+            overflow-y: auto;
         }
 
         .modal-content {
@@ -854,31 +376,19 @@
             max-height: 90vh;
             overflow-y: auto;
             padding: 30px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            touch-action: manipulation;
-        }
-
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 25px;
-        }
-
-        .modal-header h2 {
-            color: var(--primary);
+            margin: 50px auto;
+            position: relative;
         }
 
         .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.8rem;
             background: none;
             border: none;
-            font-size: 1.8rem;
             cursor: pointer;
             color: #666;
-            touch-action: manipulation;
         }
 
         .form-group {
@@ -890,40 +400,17 @@
             margin-bottom: 8px;
             font-weight: 600;
             color: var(--dark);
-            -webkit-user-select: none;
-            user-select: none;
         }
 
-        .form-control {
+        .form-control, .form-select {
             width: 100%;
             padding: 12px 15px;
             border: 2px solid #ddd;
             border-radius: 10px;
             font-size: 1rem;
-            touch-action: manipulation;
         }
 
-        .form-control:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .form-select {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1rem;
-            background-color: white;
-            touch-action: manipulation;
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        /* Rich Text Editor Styles untuk Mod Guru */
+        /* Rich Text Editor */
         .editor-toolbar {
             display: flex;
             flex-wrap: wrap;
@@ -933,7 +420,6 @@
             background-color: #f8f9fa;
             border-radius: 8px;
             border: 1px solid #ddd;
-            touch-action: manipulation;
         }
 
         .editor-btn {
@@ -947,9 +433,6 @@
             align-items: center;
             gap: 5px;
             transition: all 0.2s ease;
-            touch-action: manipulation;
-            -webkit-user-select: none;
-            user-select: none;
         }
 
         .editor-btn:hover {
@@ -960,134 +443,17 @@
 
         .editor-content {
             min-height: 200px;
-            max-height: 400px;
-            overflow-y: auto;
             padding: 15px;
             border: 2px solid #ddd;
             border-radius: 10px;
             background-color: white;
-            line-height: 1.6;
             outline: none;
-            touch-action: manipulation;
-        }
-
-        .editor-content:focus {
-            border-color: var(--accent);
-        }
-
-        .editor-content img {
-            max-width: 100%;
-            max-height: 300px;
-            border-radius: 8px;
-            margin: 10px 0;
-        }
-
-        .image-paste-info {
-            display: block;
-            margin-top: 5px;
-            font-size: 0.85rem;
-            color: #666;
-            font-style: italic;
-            -webkit-user-select: none;
-            user-select: none;
-        }
-
-        .image-preview {
-            max-width: 200px;
-            max-height: 150px;
-            border-radius: 8px;
-            margin: 10px 0;
-            border: 2px dashed #ddd;
-            display: none;
-        }
-
-        .question-list {
-            margin-top: 20px;
-            touch-action: manipulation;
-        }
-
-        .question-list-item {
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid var(--primary);
-            touch-action: manipulation;
-        }
-
-        .question-list-item h4 {
-            margin-bottom: 8px;
-            color: var(--dark);
-        }
-
-        .btn-warning {
-            background-color: var(--warning);
-            color: white;
-        }
-
-        .btn-warning:hover {
-            background-color: #e67e22;
-        }
-
-        /* Password Modal */
-        .password-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 3000;
-            touch-action: manipulation;
-        }
-
-        .password-content {
-            background-color: white;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 500px;
-            padding: 40px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            touch-action: manipulation;
-        }
-
-        .password-content h2 {
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .password-input {
-            width: 100%;
-            padding: 15px;
-            margin: 20px 0;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            text-align: center;
-            touch-action: manipulation;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .main-content {
                 flex-direction: column;
-            }
-            
-            .timer-display {
-                font-size: 2.5rem;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .subjects-grid {
-                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             }
             
             .teacher-mode {
@@ -1103,173 +469,6 @@
                 width: 100%;
                 max-width: 300px;
             }
-            
-            .tingkatan-btn {
-                min-width: 100%;
-            }
-            
-            .symbol-btn {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-            
-            .math-symbols {
-                gap: 6px;
-                padding: 10px;
-            }
-            
-            .editor-toolbar {
-                gap: 6px;
-                padding: 8px;
-            }
-            
-            .editor-btn {
-                padding: 6px 10px;
-                font-size: 0.8rem;
-            }
-            
-            .note-actions {
-                flex-direction: column;
-            }
-            
-            .date-filter-controls {
-                flex-direction: column;
-            }
-            
-            .date-input {
-                width: 100%;
-            }
-            
-            .question-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
-            }
-            
-            .question-date {
-                align-self: flex-start;
-            }
-            
-            /* Better touch targets for mobile */
-            .btn {
-                padding: 15px 25px;
-                min-height: 44px;
-            }
-            
-            .btn-sm {
-                padding: 10px 15px;
-                min-height: 40px;
-            }
-            
-            .subject-card {
-                padding: 15px 10px;
-                min-height: 90px;
-            }
-            
-            .answer-area, .note-content.editable {
-                font-size: 16px; /* Prevent zoom on iOS */
-            }
-            
-            input, textarea, select {
-                font-size: 16px; /* Prevent zoom on iOS */
-            }
-        }
-        
-        /* Additional mobile optimizations */
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            header {
-                padding: 20px 15px;
-            }
-            
-            .card {
-                padding: 20px 15px;
-            }
-            
-            .btn {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            
-            .date-filter-controls .btn {
-                width: auto;
-                flex: 1;
-            }
-        }
-
-        /* Touch device optimizations */
-        @media (hover: none) and (pointer: coarse) {
-            .subject-card:hover {
-                transform: none;
-            }
-            
-            .symbol-btn:hover {
-                background-color: white;
-                color: inherit;
-                border-color: #ddd;
-                transform: none;
-            }
-            
-            .btn:hover {
-                transform: none;
-            }
-            
-            .archive-item:hover {
-                transform: none;
-            }
-            
-            /* Add active states for touch devices */
-            .subject-card:active {
-                background: linear-gradient(145deg, #e6ebff, #d0d8ff);
-                transform: scale(0.98);
-            }
-            
-            .symbol-btn:active {
-                background-color: var(--primary);
-                color: white;
-                border-color: var(--primary);
-                transform: scale(0.95);
-            }
-            
-            .btn:active {
-                transform: scale(0.98);
-            }
-            
-            .archive-item:active {
-                background-color: #e9ecef;
-                transform: scale(0.98);
-            }
-        }
-
-        /* Fix untuk interaksi */
-        button, 
-        .btn,
-        .subject-card,
-        .symbol-btn,
-        .editor-btn,
-        .archive-item {
-            cursor: pointer !important;
-            pointer-events: auto !important;
-            user-select: none !important;
-            -webkit-user-select: none !important;
-        }
-        
-        /* Hilangkan apa-apa overlay yang mungkin menyekat */
-        body::before {
-            display: none !important;
-        }
-        
-        /* Pastikan modal boleh di-interaksi */
-        .modal {
-            pointer-events: auto !important;
-        }
-        
-        .modal-content {
-            pointer-events: auto !important;
         }
     </style>
 </head>
@@ -1299,89 +498,7 @@
                 <div class="card" id="subjectsCard">
                     <h2><i class="fas fa-book-open"></i> Mata Pelajaran</h2>
                     <div class="subjects-grid" id="subjectsGrid">
-                        <!-- Tingkatan 3 Subjects (Default) -->
-                        <div class="subject-card active" data-subject="bm" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-bm"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-language"></i></div>
-                            <div class="subject-name">Bahasa Melayu <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="bi" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-bi"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-globe-americas"></i></div>
-                            <div class="subject-name">Bahasa Inggeris <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="math" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-math"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-calculator"></i></div>
-                            <div class="subject-name">Matematik <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="science" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-science"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-flask"></i></div>
-                            <div class="subject-name">Sains <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="history" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-history"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-landmark"></i></div>
-                            <div class="subject-name">Sejarah <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="geo" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-geo"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-globe-asia"></i></div>
-                            <div class="subject-name">Geografi <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="islam" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-islam"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-star-and-crescent"></i></div>
-                            <div class="subject-name">Pendidikan Islam <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="rbt" data-tingkatan="3">
-                            <div class="note-indicator" id="noteIndicator-rbt"></div>
-                            <div class="subject-icon tingkatan3"><i class="fas fa-tools"></i></div>
-                            <div class="subject-name">RBT/ASK <span class="tingkatan-label tingkatan3">T3</span></div>
-                        </div>
-
-                        <!-- Tingkatan 4 Subjects (Hidden by default) -->
-                        <div class="subject-card" data-subject="bm4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-bm4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-language"></i></div>
-                            <div class="subject-name">Bahasa Melayu <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="bi4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-bi4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-globe-americas"></i></div>
-                            <div class="subject-name">Bahasa Inggeris <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="math4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-math4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-calculator"></i></div>
-                            <div class="subject-name">Matematik <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="history4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-history4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-landmark"></i></div>
-                            <div class="subject-name">Sejarah <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="islam4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-islam4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-star-and-crescent"></i></div>
-                            <div class="subject-name">Pendidikan Islam <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="gkt4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-gkt4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-drafting-compass"></i></div>
-                            <div class="subject-name">Grafik Komunikasi Teknikal <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="comp4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-comp4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-laptop-code"></i></div>
-                            <div class="subject-name">Sains Komputer <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
-                        <div class="subject-card" data-subject="lk4" data-tingkatan="4" style="display: none;">
-                            <div class="note-indicator" id="noteIndicator-lk4"></div>
-                            <div class="subject-icon tingkatan4"><i class="fas fa-ruler-combined"></i></div>
-                            <div class="subject-name">Lukisan Kejuruteraan <span class="tingkatan-label tingkatan4">T4</span></div>
-                        </div>
+                        <!-- Subjects akan diisi oleh JavaScript -->
                     </div>
                     
                     <div id="teacherButtons" style="display:none; margin-top:20px;">
@@ -1397,17 +514,6 @@
                 <div class="timer-container" id="timerContainer">
                     <h3><i class="fas fa-clock"></i> Masa Menjawab</h3>
                     <div class="timer-display" id="timerDisplay">00:00:00</div>
-                    
-                    <div class="progress-container">
-                        <div class="progress-bar">
-                            <div class="progress-fill" id="progressFill"></div>
-                        </div>
-                        <div class="progress-text">
-                            <span id="currentQuestionNum">Soalan 1</span>
-                            <span id="totalQuestions">daripada 0</span>
-                        </div>
-                    </div>
-                    
                     <button class="btn btn-success" style="width:100%; margin-top:15px;" id="submitAllBtn">
                         <i class="fas fa-paper-plane"></i> Hantar Semua Jawapan
                     </button>
@@ -1419,24 +525,8 @@
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
                         <h2><i class="fas fa-question-circle"></i> Soalan</h2>
                         <div id="questionCount" style="color:var(--primary); font-weight:600;">
-                            Soalan 1 daripada 0
+                            Pilih mata pelajaran
                         </div>
-                    </div>
-                    
-                    <!-- Date Filter Section -->
-                    <div class="date-filter-section" id="dateFilterSection" style="display: none;">
-                        <h4><i class="fas fa-calendar-alt"></i> Tapis Mengikut Tarikh</h4>
-                        <div class="date-filter-controls">
-                            <input type="date" class="date-input" id="startDate">
-                            <input type="date" class="date-input" id="endDate">
-                            <button class="btn btn-primary btn-sm" id="applyDateFilter">
-                                <i class="fas fa-filter"></i> Tapis
-                            </button>
-                            <button class="btn btn-secondary btn-sm" id="clearDateFilter">
-                                <i class="fas fa-times"></i> Padam
-                            </button>
-                        </div>
-                        <div id="dateFilterStatus" style="margin-top: 10px; font-size: 0.9rem; color: #6c757d;"></div>
                     </div>
                     
                     <div id="questionsContainer">
@@ -1447,42 +537,17 @@
                             </p>
                         </div>
                     </div>
-                    
-                    <div style="text-align:center; margin-top:20px;">
-                        <button class="btn btn-primary" id="prevQuestion" disabled>
-                            <i class="fas fa-arrow-left"></i> Sebelumnya
-                        </button>
-                        <button class="btn btn-primary" id="nextQuestion" disabled>
-                            <i class="fas fa-arrow-right"></i> Seterusnya
-                        </button>
-                    </div>
-
-                    <!-- Archive Section -->
-                    <div class="archive-section" id="archiveSection" style="display: none;">
-                        <h3><i class="fas fa-archive"></i> Arkib Soalan Lepas</h3>
-                        <div id="archiveList" class="archive-list">
-                            <div class="no-archive-message">
-                                <i class="fas fa-archive" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
-                                Tiada arkib soalan lepas untuk mata pelajaran ini.
-                            </div>
-                        </div>
-                        <div style="margin-top: 15px;">
-                            <button class="btn btn-archive" id="loadArchiveBtn" style="width:100%;">
-                                <i class="fas fa-history"></i> Muat Semua Arkib
-                            </button>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Password Modal -->
-    <div class="password-modal" id="passwordModal">
-        <div class="password-content">
+    <div class="modal" id="passwordModal">
+        <div class="modal-content">
             <h2><i class="fas fa-lock"></i> Akses Mod Guru</h2>
             <p>Sila masukkan kata laluan untuk akses Mod Guru:</p>
-            <input type="password" class="password-input" id="passwordInput" placeholder="Masukkan kata laluan">
+            <input type="password" class="form-control" id="passwordInput" placeholder="Masukkan kata laluan">
             <div style="display:flex; gap:10px; margin-top:20px;">
                 <button class="btn btn-primary" id="submitPassword" style="flex:1;">
                     <i class="fas fa-sign-in-alt"></i> Masuk
@@ -1518,24 +583,7 @@
                     <label for="questionSubject">Mata Pelajaran</label>
                     <select class="form-select" id="questionSubject" required>
                         <option value="">Pilih mata pelajaran</option>
-                        <!-- Tingkatan 3 Subjects -->
-                        <option value="bm">Bahasa Melayu (T3)</option>
-                        <option value="bi">Bahasa Inggeris (T3)</option>
-                        <option value="math">Matematik (T3)</option>
-                        <option value="science">Sains (T3)</option>
-                        <option value="history">Sejarah (T3)</option>
-                        <option value="geo">Geografi (T3)</option>
-                        <option value="islam">Pendidikan Islam (T3)</option>
-                        <option value="rbt">RBT/ASK (T3)</option>
-                        <!-- Tingkatan 4 Subjects -->
-                        <option value="bm4">Bahasa Melayu (T4)</option>
-                        <option value="bi4">Bahasa Inggeris (T4)</option>
-                        <option value="math4">Matematik (T4)</option>
-                        <option value="history4">Sejarah (T4)</option>
-                        <option value="islam4">Pendidikan Islam (T4)</option>
-                        <option value="gkt4">Grafik Komunikasi Teknikal (T4)</option>
-                        <option value="comp4">Sains Komputer (T4)</option>
-                        <option value="lk4">Lukisan Kejuruteraan (T4)</option>
+                        <!-- Options akan diisi oleh JavaScript -->
                     </select>
                 </div>
                 
@@ -1545,45 +593,76 @@
                 </div>
                 
                 <div class="form-group">
+                    <label for="questionType">Jenis Soalan</label>
+                    <select class="form-select" id="questionType" required>
+                        <option value="text">Teks Sahaja</option>
+                        <option value="table">Dengan Jadual</option>
+                        <option value="image">Dengan Gambar</option>
+                        <option value="mixed">Teks + Jadual + Gambar</option>
+                    </select>
+                </div>
+                
+                <div class="form-group" id="textQuestionGroup">
                     <label for="questionText">Teks Soalan</label>
-                    <textarea class="form-control" id="questionText" placeholder="Masukkan soalan di sini..." required rows="4"></textarea>
+                    <textarea class="form-control" id="questionText" placeholder="Masukkan soalan di sini..." rows="4"></textarea>
+                </div>
+                
+                <div class="form-group" id="tableQuestionGroup" style="display: none;">
+                    <label for="questionTable">Jadual Soalan</label>
+                    <div id="tableBuilder">
+                        <div style="margin-bottom: 15px;">
+                            <button type="button" class="btn btn-sm btn-primary" id="addRowBtn">
+                                <i class="fas fa-plus"></i> Tambah Baris
+                            </button>
+                            <button type="button" class="btn btn-sm btn-primary" id="addColumnBtn">
+                                <i class="fas fa-plus"></i> Tambah Lajur
+                            </button>
+                        </div>
+                        <div id="tablePreview" style="overflow-x: auto;">
+                            <table class="question-table" id="questionTablePreview">
+                                <thead>
+                                    <tr>
+                                        <th contenteditable="true">Lajur 1</th>
+                                        <th contenteditable="true">Lajur 2</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td contenteditable="true">Data 1</td>
+                                        <td contenteditable="true">Data 2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group" id="imageQuestionGroup" style="display: none;">
+                    <label for="questionImage">Gambar Soalan</label>
+                    <div class="image-upload-container" id="imageUploadContainer">
+                        <i class="fas fa-cloud-upload-alt" style="font-size: 3rem; color: #666; margin-bottom: 10px;"></i>
+                        <p>Klik untuk memuat naik gambar atau seret dan lepaskan di sini</p>
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">
+                            Format yang disokong: JPG, PNG, GIF<br>
+                            Saiz maksimum: 5MB
+                        </p>
+                        <input type="file" id="questionImage" accept="image/*" style="display: none;">
+                    </div>
+                    <div id="imagePreviewContainer">
+                        <img id="imagePreview" class="question-image" style="display: none;">
+                    </div>
                 </div>
                 
                 <div class="form-group">
-                    <label for="questionAnswer">Jawapan (Hanya untuk Mod Guru) <span class="image-paste-info">Anda boleh paste gambar di sini (Ctrl+V)</span></label>
-                    
-                    <div class="editor-toolbar" id="answerToolbar">
-                        <button type="button" class="editor-btn" data-command="bold">
-                            <i class="fas fa-bold"></i> Tebal
-                        </button>
-                        <button type="button" class="editor-btn" data-command="italic">
-                            <i class="fas fa-italic"></i> Condong
-                        </button>
-                        <button type="button" class="editor-btn" data-command="underline">
-                            <i class="fas fa-underline"></i> Garis
-                        </button>
-                        <button type="button" class="editor-btn" data-command="insertUnorderedList">
-                            <i class="fas fa-list-ul"></i> Senarai
-                        </button>
-                        <button type="button" class="editor-btn" data-command="insertOrderedList">
-                            <i class="fas fa-list-ol"></i> Nombor
-                        </button>
-                        <button type="button" class="editor-btn" id="clearFormatting">
-                            <i class="fas fa-eraser"></i> Padam Format
-                        </button>
-                        <button type="button" class="editor-btn" id="clearImages">
-                            <i class="fas fa-trash-alt"></i> Padam Gambar
-                        </button>
+                    <label for="questionAnswer">Jawapan</label>
+                    <div class="editor-toolbar">
+                        <button type="button" class="editor-btn" data-command="bold"><i class="fas fa-bold"></i></button>
+                        <button type="button" class="editor-btn" data-command="italic"><i class="fas fa-italic"></i></button>
+                        <button type="button" class="editor-btn" data-command="underline"><i class="fas fa-underline"></i></button>
+                        <button type="button" class="editor-btn" id="insertTableBtn"><i class="fas fa-table"></i> Jadual</button>
+                        <button type="button" class="editor-btn" id="insertImageBtn"><i class="fas fa-image"></i> Gambar</button>
                     </div>
-                    
-                    <div class="editor-content" id="questionAnswer" contenteditable="true" placeholder="Masukkan jawapan contoh di sini...">
-                    </div>
-                    
-                    <div id="imagePreviewContainer" style="margin-top: 10px;">
-                        <img id="imagePreview" class="image-preview" alt="Preview gambar">
-                    </div>
-                    
-                    <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+                    <div class="editor-content" id="questionAnswer" contenteditable="true" placeholder="Masukkan jawapan di sini..."></div>
                 </div>
                 
                 <div class="form-group">
@@ -1591,14 +670,14 @@
                     <input type="number" class="form-control" id="questionMarks" min="1" max="100" value="10">
                 </div>
                 
-                <div class="form-group">
-                    <label for="questionTags">Tag/Topik (pisahkan dengan koma)</label>
-                    <input type="text" class="form-control" id="questionTags" placeholder="Contoh: algebra, persamaan, kuadratik">
+                <div style="display:flex; gap:10px; margin-top:20px;">
+                    <button type="submit" class="btn btn-success" style="flex:1;">
+                        <i class="fas fa-save"></i> Simpan Soalan
+                    </button>
+                    <button type="button" class="btn btn-danger" id="cancelAddQuestion" style="flex:1;">
+                        <i class="fas fa-times"></i> Batal
+                    </button>
                 </div>
-                
-                <button type="submit" class="btn btn-success" style="width:100%;">
-                    <i class="fas fa-save"></i> Simpan Soalan
-                </button>
             </form>
         </div>
     </div>
@@ -1607,7 +686,7 @@
     <div class="modal" id="manageQuestionsModal">
         <div class="modal-content">
             <div class="modal-header">
-                <h2><i class="fas fa-edit"></i> Urus Soalan</h2>
+                <h2><i class="fas fa-edit"></i> Urus Soalan & Jawapan</h2>
                 <button class="close-modal" id="closeManageModal">&times;</button>
             </div>
             
@@ -1624,1335 +703,665 @@
                 <label for="filterSubject">Tapis mengikut Mata Pelajaran</label>
                 <select class="form-select" id="filterSubject">
                     <option value="all">Semua Mata Pelajaran</option>
-                    <!-- Tingkatan 3 -->
-                    <option value="bm">Bahasa Melayu (T3)</option>
-                    <option value="bi">Bahasa Inggeris (T3)</option>
-                    <option value="math">Matematik (T3)</option>
-                    <option value="science">Sains (T3)</option>
-                    <option value="history">Sejarah (T3)</option>
-                    <option value="geo">Geografi (T3)</option>
-                    <option value="islam">Pendidikan Islam (T3)</option>
-                    <option value="rbt">RBT/ASK (T3)</option>
-                    <!-- Tingkatan 4 -->
-                    <option value="bm4">Bahasa Melayu (T4)</option>
-                    <option value="bi4">Bahasa Inggeris (T4)</option>
-                    <option value="math4">Matematik (T4)</option>
-                    <option value="history4">Sejarah (T4)</option>
-                    <option value="islam4">Pendidikan Islam (T4)</option>
-                    <option value="gkt4">Grafik Komunikasi Teknikal (T4)</option>
-                    <option value="comp4">Sains Komputer (T4)</option>
-                    <option value="lk4">Lukisan Kejuruteraan (T4)</option>
                 </select>
             </div>
             
-            <div class="form-group">
-                <label for="filterDate">Tapis mengikut Tarikh</label>
-                <input type="date" class="form-control" id="filterDate">
-            </div>
-            
-            <div id="questionsList" class="question-list">
+            <div id="questionsList" style="max-height: 500px; overflow-y: auto;">
                 <p id="noQuestionsMessage">Tiada soalan disimpan. Tambah soalan terlebih dahulu.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // Data soalan contoh dengan tarikh
-        const defaultQuestions = {
-            // Tingkatan 3
-            bm: [
-                { 
-                    id: 1, 
-                    text: "Huraikan maksud peribahasa 'bagai aur dengan tebing'.", 
-                    answer: "Peribahasa 'bagai aur dengan tebing' bermaksud saling membantu dan bekerjasama antara satu sama lain.",
-                    marks: 10,
-                    tingkatan: 3,
-                    date: "2024-03-15",
-                    tags: ["peribahasa", "maksud", "kerjasama"]
-                },
-                { 
-                    id: 2, 
-                    text: "Tulis sebuah karangan bertajuk 'Kepentingan Membaca'.", 
-                    answer: "Membaca adalah jambatan ilmu yang membuka minda...",
-                    marks: 20,
-                    tingkatan: 3,
-                    date: "2024-03-10",
-                    tags: ["karangan", "membaca", "ilmu"]
-                }
+        // Data Mata Pelajaran
+        const subjectsData = {
+            '3': [
+                { code: 'bm', name: 'Bahasa Melayu', icon: 'fa-language' },
+                { code: 'bi', name: 'Bahasa Inggeris', icon: 'fa-globe-americas' },
+                { code: 'math', name: 'Matematik', icon: 'fa-calculator' },
+                { code: 'science', name: 'Sains', icon: 'fa-flask' },
+                { code: 'history', name: 'Sejarah', icon: 'fa-landmark' },
+                { code: 'geo', name: 'Geografi', icon: 'fa-globe-asia' },
+                { code: 'islam', name: 'Pendidikan Islam', icon: 'fa-star-and-crescent' },
+                { code: 'rbt', name: 'RBT/ASK', icon: 'fa-tools' }
             ],
-            math: [
-                { 
-                    id: 3, 
-                    text: "Selesaikan persamaan kuadratik berikut: 2x² + 5x - 3 = 0", 
-                    answer: "x = 0.5 atau x = -3\n\nLangkah penyelesaian:\n1. Gunakan formula kuadratik: x = [-b ± √(b² - 4ac)] / 2a\n2. a = 2, b = 5, c = -3\n3. x = [-5 ± √(5² - 4(2)(-3))] / (2×2)\n4. x = [-5 ± √(25 + 24)] / 4\n5. x = [-5 ± √49] / 4\n6. x = [-5 ± 7] / 4\n7. x = 0.5 atau x = -3",
-                    marks: 15,
-                    tingkatan: 3,
-                    date: "2024-03-20",
-                    tags: ["algebra", "persamaan", "kuadratik"]
-                }
-            ],
-            // Tingkatan 4
-            math4: [
-                { 
-                    id: 101, 
-                    text: "Cari nilai x bagi persamaan logaritma: log₃(x + 2) = 2", 
-                    answer: "x = 7\n\nLangkah penyelesaian:\n1. log₃(x + 2) = 2\n2. x + 2 = 3²\n3. x + 2 = 9\n4. x = 7",
-                    marks: 10,
-                    tingkatan: 4,
-                    date: "2024-03-18",
-                    tags: ["logaritma", "algebra", "persamaan"]
-                },
-                { 
-                    id: 102, 
-                    text: "Kira had berikut: lim(x→2) (x² - 4)/(x - 2)", 
-                    answer: "4\n\nLangkah penyelesaian:\n1. lim(x→2) (x² - 4)/(x - 2)\n2. = lim(x→2) (x-2)(x+2)/(x-2)\n3. = lim(x→2) (x+2)\n4. = 2 + 2 = 4",
-                    marks: 12,
-                    tingkatan: 4,
-                    date: "2024-03-05",
-                    tags: ["kalkulus", "had", "limit"]
-                }
-            ],
-            comp4: [
-                { 
-                    id: 103, 
-                    text: "Terangkan perbezaan antara RAM dan ROM.", 
-                    answer: "RAM (Random Access Memory) adalah memori sementara yang menyimpan data semasa komputer berfungsi. Ia bersifat tidak kekal (volatile).\n\nROM (Read-Only Memory) adalah memori kekal yang menyimpan arahan asas komputer. Ia bersifat kekal (non-volatile).",
-                    marks: 15,
-                    tingkatan: 4,
-                    date: "2024-03-12",
-                    tags: ["hardware", "memori", "komputer"]
-                }
-            ],
-            gkt4: [
-                { 
-                    id: 104, 
-                    text: "Apakah maksud skala 1:50 dalam lukisan teknikal?", 
-                    answer: "Skala 1:50 bermaksud 1 unit pada lukisan mewakili 50 unit pada objek sebenar. Ini bermakna objek dilukis 50 kali lebih kecil daripada saiz sebenar.",
-                    marks: 10,
-                    tingkatan: 4,
-                    date: "2024-03-08",
-                    tags: ["skala", "lukisan", "teknikal"]
-                }
+            '4': [
+                { code: 'bm4', name: 'Bahasa Melayu', icon: 'fa-language' },
+                { code: 'bi4', name: 'Bahasa Inggeris', icon: 'fa-globe-americas' },
+                { code: 'math4', name: 'Matematik', icon: 'fa-calculator' },
+                { code: 'science4', name: 'Sains', icon: 'fa-flask' },
+                { code: 'history4', name: 'Sejarah', icon: 'fa-landmark' },
+                { code: 'moral4', name: 'Pendidikan Moral', icon: 'fa-hands-helping' },
+                { code: 'physics4', name: 'Fizik', icon: 'fa-atom' },
+                { code: 'chemistry4', name: 'Kimia', icon: 'fa-vial' },
+                { code: 'biology4', name: 'Biologi', icon: 'fa-dna' },
+                { code: 'addmath4', name: 'Matematik Tambahan', icon: 'fa-calculator' }
             ]
         };
 
-        // Data nota contoh
-        const defaultNotes = {
-            // Tingkatan 3
-            bm: "Nota: Bahasa Melayu Tingkatan 3 fokus pada penguasaan tatabahasa, kosa kata, dan penulisan karangan yang baik.\n\nTips:\n1. Baca banyak buku untuk memperkaya kosa kata\n2. Amalkan menulis karangan setiap minggu\n3. Kuasai tatabahasa asas",
-            math: "Nota: Matematik Tingkatan 3 meliputi algebra, geometri, dan statistik.\n\nFormula penting:\n• Luas bulatan = πr²\n• Isipadu silinder = πr²h\n• Teorem Pythagoras: a² + b² = c²",
-            // Tingkatan 4
-            math4: "Nota: Matematik Tingkatan 4 meliputi fungsi, kalkulus asas, dan trigonometri.\n\nFormula penting:\n• Fungsi kuadratik: f(x) = ax² + bx + c\n• Had: lim(x→a) f(x)\n• Derivatif: f'(x)",
-            comp4: "Nota: Sains Komputer Tingkatan 4 meliputi pengaturcaraan, struktur data, dan algoritma.\n\nBahasa pengaturcaraan:\n• Python (utama)\n• JavaScript\n• Pseudokod"
-        };
+        // Storage Keys
+        const STORAGE_KEY = 'portal_soalan_data';
+        const PASSWORD = 'walid82';
 
-        // Simpan dalam localStorage
-        const STORAGE_KEY_QUESTIONS = 'portal_soalan_tingkatan_3_4';
-        const STORAGE_KEY_NOTES = 'portal_nota_tingkatan_3_4';
-        const STORAGE_KEY_ARCHIVE = 'portal_arkib_tingkatan_3_4';
-        
-        function getQuestions() {
-            const stored = localStorage.getItem(STORAGE_KEY_QUESTIONS);
-            return stored ? JSON.parse(stored) : defaultQuestions;
-        }
-        
-        function saveQuestions(questions) {
-            localStorage.setItem(STORAGE_KEY_QUESTIONS, JSON.stringify(questions));
-        }
-        
-        function getNotes() {
-            const stored = localStorage.getItem(STORAGE_KEY_NOTES);
-            return stored ? JSON.parse(stored) : defaultNotes;
-        }
-        
-        function saveNotes(notes) {
-            localStorage.setItem(STORAGE_KEY_NOTES, JSON.stringify(notes));
-        }
-        
-        function getArchive() {
-            const stored = localStorage.getItem(STORAGE_KEY_ARCHIVE);
-            return stored ? JSON.parse(stored) : {};
-        }
-        
-        function saveArchive(archive) {
-            localStorage.setItem(STORAGE_KEY_ARCHIVE, JSON.stringify(archive));
+        // State variables
+        let currentTingkatan = '3';
+        let currentSubject = null;
+        let questions = [];
+        let teacherMode = false;
+        let timerInterval = null;
+        let timerSeconds = 0;
+
+        // Initialize App
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeApp();
+            setupEventListeners();
+            loadQuestions();
+            renderSubjects();
+        });
+
+        function initializeApp() {
+            // Set current date
+            document.getElementById('questionDate').value = new Date().toISOString().split('T')[0];
+            
+            // Populate subject selectors
+            populateSubjectSelectors();
         }
 
-        // Format tarikh ke format Malaysia
+        function setupEventListeners() {
+            // Tingkatan toggle
+            document.getElementById('tingkatanToggle').addEventListener('click', function(e) {
+                if (e.target.classList.contains('tingkatan-btn')) {
+                    document.querySelectorAll('.tingkatan-btn').forEach(btn => btn.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentTingkatan = e.target.dataset.tingkatan;
+                    renderSubjects();
+                }
+            });
+
+            // Teacher mode toggle
+            document.getElementById('teacherModeToggle').addEventListener('click', toggleTeacherMode);
+
+            // Password modal
+            document.getElementById('submitPassword').addEventListener('click', function() {
+                const password = document.getElementById('passwordInput').value;
+                if (password === PASSWORD) {
+                    teacherMode = true;
+                    document.getElementById('teacherButtons').style.display = 'block';
+                    document.getElementById('passwordModal').style.display = 'none';
+                    document.getElementById('teacherModeToggle').innerHTML = '<i class="fas fa-user-graduate"></i> Mod Pelajar';
+                    loadQuestions();
+                } else {
+                    alert('Kata laluan salah!');
+                }
+            });
+
+            document.getElementById('cancelPassword').addEventListener('click', function() {
+                document.getElementById('passwordModal').style.display = 'none';
+            });
+
+            // Add question button
+            document.getElementById('addQuestionBtn').addEventListener('click', function() {
+                resetQuestionForm();
+                document.getElementById('addQuestionModal').style.display = 'block';
+            });
+
+            // Manage questions button
+            document.getElementById('manageQuestionsBtn').addEventListener('click', function() {
+                showManageQuestions();
+            });
+
+            // Close modals
+            document.getElementById('closeAddModal').addEventListener('click', function() {
+                document.getElementById('addQuestionModal').style.display = 'none';
+            });
+
+            document.getElementById('closeManageModal').addEventListener('click', function() {
+                document.getElementById('manageQuestionsModal').style.display = 'none';
+            });
+
+            document.getElementById('cancelAddQuestion').addEventListener('click', function() {
+                document.getElementById('addQuestionModal').style.display = 'none';
+            });
+
+            // Question type change
+            document.getElementById('questionType').addEventListener('change', function() {
+                const type = this.value;
+                document.getElementById('textQuestionGroup').style.display = type === 'table' || type === 'image' ? 'none' : 'block';
+                document.getElementById('tableQuestionGroup').style.display = type === 'table' || type === 'mixed' ? 'block' : 'none';
+                document.getElementById('imageQuestionGroup').style.display = type === 'image' || type === 'mixed' ? 'block' : 'none';
+            });
+
+            // Table builder
+            document.getElementById('addRowBtn').addEventListener('click', addTableRow);
+            document.getElementById('addColumnBtn').addEventListener('click', addTableColumn);
+
+            // Image upload
+            document.getElementById('imageUploadContainer').addEventListener('click', function() {
+                document.getElementById('questionImage').click();
+            });
+
+            document.getElementById('questionImage').addEventListener('change', function(e) {
+                const file = e.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.getElementById('imagePreview');
+                        img.src = e.target.result;
+                        img.style.display = 'block';
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Drag and drop for images
+            const dropZone = document.getElementById('imageUploadContainer');
+            dropZone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.classList.add('dragover');
+            });
+
+            dropZone.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+            });
+
+            dropZone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.classList.remove('dragover');
+                
+                const file = e.dataTransfer.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        const img = document.getElementById('imagePreview');
+                        img.src = e.target.result;
+                        img.style.display = 'block';
+                        document.getElementById('questionImage').files = e.dataTransfer.files;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+            // Form submission
+            document.getElementById('addQuestionForm').addEventListener('submit', saveQuestion);
+
+            // Filter change
+            document.getElementById('filterTingkatan').addEventListener('change', filterQuestionsList);
+            document.getElementById('filterSubject').addEventListener('change', filterQuestionsList);
+
+            // Submit all answers
+            document.getElementById('submitAllBtn').addEventListener('click', submitAllAnswers);
+        }
+
+        function renderSubjects() {
+            const grid = document.getElementById('subjectsGrid');
+            grid.innerHTML = '';
+            
+            subjectsData[currentTingkatan].forEach(subject => {
+                const card = document.createElement('div');
+                card.className = `subject-card ${currentSubject === subject.code ? 'active' : ''}`;
+                card.dataset.subject = subject.code;
+                card.innerHTML = `
+                    <div class="subject-icon ${currentTingkatan === '4' ? 'tingkatan4' : 'tingkatan3'}">
+                        <i class="fas ${subject.icon}"></i>
+                    </div>
+                    <div class="subject-name">${subject.name} <span class="tingkatan-label tingkatan${currentTingkatan}">T${currentTingkatan}</span></div>
+                `;
+                
+                card.addEventListener('click', function() {
+                    currentSubject = subject.code;
+                    document.querySelectorAll('.subject-card').forEach(c => c.classList.remove('active'));
+                    this.classList.add('active');
+                    loadSubjectQuestions();
+                });
+                
+                grid.appendChild(card);
+            });
+        }
+
+        function populateSubjectSelectors() {
+            const subjectSelect = document.getElementById('questionSubject');
+            const filterSubjectSelect = document.getElementById('filterSubject');
+            
+            subjectSelect.innerHTML = '<option value="">Pilih mata pelajaran</option>';
+            filterSubjectSelect.innerHTML = '<option value="all">Semua Mata Pelajaran</option>';
+            
+            // Add Tingkatan 3 subjects
+            subjectsData['3'].forEach(subject => {
+                subjectSelect.innerHTML += `<option value="${subject.code}">${subject.name} (T3)</option>`;
+                filterSubjectSelect.innerHTML += `<option value="${subject.code}">${subject.name} (T3)</option>`;
+            });
+            
+            // Add Tingkatan 4 subjects
+            subjectsData['4'].forEach(subject => {
+                subjectSelect.innerHTML += `<option value="${subject.code}">${subject.name} (T4)</option>`;
+                filterSubjectSelect.innerHTML += `<option value="${subject.code}">${subject.name} (T4)</option>`;
+            });
+        }
+
+        function loadQuestions() {
+            const data = localStorage.getItem(STORAGE_KEY);
+            questions = data ? JSON.parse(data) : [];
+        }
+
+        function saveQuestions() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(questions));
+        }
+
+        function loadSubjectQuestions() {
+            const subjectQuestions = questions.filter(q => q.subject === currentSubject);
+            const container = document.getElementById('questionsContainer');
+            
+            if (subjectQuestions.length === 0) {
+                container.innerHTML = `
+                    <div class="question-container">
+                        <p style="text-align:center; color:#666; padding:30px;">
+                            <i class="fas fa-question-circle" style="font-size:3rem; margin-bottom:15px; display:block;"></i>
+                            Tiada soalan untuk mata pelajaran ini.
+                        </p>
+                    </div>
+                `;
+                document.getElementById('questionCount').textContent = 'Tiada soalan';
+                return;
+            }
+            
+            let html = '';
+            subjectQuestions.forEach((question, index) => {
+                html += renderQuestion(question, index + 1);
+            });
+            
+            container.innerHTML = html;
+            document.getElementById('questionCount').textContent = `${subjectQuestions.length} soalan`;
+            
+            // Start timer if not already started
+            if (!timerInterval) {
+                startTimer();
+            }
+        }
+
+        function renderQuestion(question, number) {
+            let questionContent = '';
+            
+            if (question.type === 'table') {
+                questionContent = question.tableHtml;
+            } else if (question.type === 'image') {
+                questionContent = `<div class="question-image-container"><img src="${question.image}" class="question-image" alt="Gambar soalan"></div>`;
+            } else if (question.type === 'mixed') {
+                questionContent = question.text || '';
+                if (question.tableHtml) questionContent += question.tableHtml;
+                if (question.image) questionContent += `<div class="question-image-container"><img src="${question.image}" class="question-image" alt="Gambar soalan"></div>`;
+            } else {
+                questionContent = question.text || '';
+            }
+            
+            return `
+                <div class="question-container" data-id="${question.id}">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                        <div class="question-number ${currentTingkatan === '4' ? 'tingkatan4' : ''}">${number}</div>
+                        <div class="question-date">
+                            <i class="fas fa-calendar-alt"></i> ${formatDate(question.date)}
+                        </div>
+                    </div>
+                    
+                    <div class="question-text">
+                        ${questionContent}
+                    </div>
+                    
+                    ${question.marks ? `<div style="margin-top: 10px;"><small><i class="fas fa-star"></i> ${question.marks} markah</small></div>` : ''}
+                    
+                    ${teacherMode ? `
+                        <div style="margin-top: 20px; padding: 15px; background-color: #fffde7; border-radius: 10px;">
+                            <h4><i class="fas fa-key"></i> Jawapan</h4>
+                            <div>${question.answer || ''}</div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <button class="btn btn-sm btn-primary edit-question-btn" data-id="${question.id}">
+                                <i class="fas fa-edit"></i> Edit
+                            </button>
+                            <button class="btn btn-sm btn-danger delete-question-btn" data-id="${question.id}">
+                                <i class="fas fa-trash"></i> Padam
+                            </button>
+                        </div>
+                    ` : `
+                        <div style="margin-top: 20px;">
+                            <label for="answer${question.id}">Jawapan Anda:</label>
+                            <textarea class="form-control" id="answer${question.id}" rows="3" placeholder="Tulis jawapan anda di sini..."></textarea>
+                        </div>
+                    `}
+                </div>
+            `;
+        }
+
+        function resetQuestionForm() {
+            document.getElementById('editQuestionId').value = '';
+            document.getElementById('questionTingkatan').value = currentTingkatan;
+            document.getElementById('questionSubject').value = currentSubject || '';
+            document.getElementById('questionDate').value = new Date().toISOString().split('T')[0];
+            document.getElementById('questionType').value = 'text';
+            document.getElementById('questionText').value = '';
+            document.getElementById('questionAnswer').innerHTML = '';
+            document.getElementById('questionMarks').value = '10';
+            
+            // Reset table
+            const table = document.getElementById('questionTablePreview');
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th contenteditable="true">Lajur 1</th>
+                        <th contenteditable="true">Lajur 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td contenteditable="true">Data 1</td>
+                        <td contenteditable="true">Data 2</td>
+                    </tr>
+                </tbody>
+            `;
+            
+            // Reset image
+            document.getElementById('imagePreview').style.display = 'none';
+            document.getElementById('questionImage').value = '';
+            
+            // Show/hide appropriate groups
+            document.getElementById('textQuestionGroup').style.display = 'block';
+            document.getElementById('tableQuestionGroup').style.display = 'none';
+            document.getElementById('imageQuestionGroup').style.display = 'none';
+        }
+
+        function addTableRow() {
+            const table = document.getElementById('questionTablePreview');
+            const rowCount = table.rows.length;
+            const colCount = table.rows[0].cells.length;
+            
+            const newRow = table.insertRow();
+            for (let i = 0; i < colCount; i++) {
+                const cell = newRow.insertCell();
+                cell.contentEditable = true;
+                cell.textContent = `Data ${rowCount}.${i + 1}`;
+            }
+        }
+
+        function addTableColumn() {
+            const table = document.getElementById('questionTablePreview');
+            const rowCount = table.rows.length;
+            
+            // Add header
+            const headerRow = table.rows[0];
+            const newHeaderCell = headerRow.insertCell();
+            newHeaderCell.contentEditable = true;
+            newHeaderCell.textContent = `Lajur ${headerRow.cells.length}`;
+            
+            // Add data cells
+            for (let i = 1; i < rowCount; i++) {
+                const cell = table.rows[i].insertCell();
+                cell.contentEditable = true;
+                cell.textContent = `Data ${i}.${table.rows[i].cells.length}`;
+            }
+        }
+
+        function saveQuestion(e) {
+            e.preventDefault();
+            
+            const id = document.getElementById('editQuestionId').value || Date.now();
+            const tingkatan = document.getElementById('questionTingkatan').value;
+            const subject = document.getElementById('questionSubject').value;
+            const date = document.getElementById('questionDate').value;
+            const type = document.getElementById('questionType').value;
+            const answer = document.getElementById('questionAnswer').innerHTML;
+            const marks = document.getElementById('questionMarks').value;
+            
+            let questionData = {
+                id,
+                tingkatan,
+                subject,
+                date,
+                type,
+                answer,
+                marks
+            };
+            
+            // Handle different question types
+            if (type === 'text' || type === 'mixed') {
+                questionData.text = document.getElementById('questionText').value;
+            }
+            
+            if (type === 'table' || type === 'mixed') {
+                const table = document.getElementById('questionTablePreview');
+                questionData.tableHtml = table.outerHTML;
+            }
+            
+            if (type === 'image' || type === 'mixed') {
+                const imagePreview = document.getElementById('imagePreview');
+                if (imagePreview.style.display !== 'none') {
+                    questionData.image = imagePreview.src;
+                }
+            }
+            
+            // Save question
+            if (document.getElementById('editQuestionId').value) {
+                // Update existing question
+                const index = questions.findIndex(q => q.id == id);
+                if (index !== -1) {
+                    questions[index] = questionData;
+                }
+            } else {
+                // Add new question
+                questions.push(questionData);
+            }
+            
+            saveQuestions();
+            document.getElementById('addQuestionModal').style.display = 'none';
+            loadSubjectQuestions();
+            showNotification('Soalan berjaya disimpan!');
+        }
+
+        function showManageQuestions() {
+            loadQuestions();
+            filterQuestionsList();
+            document.getElementById('manageQuestionsModal').style.display = 'block';
+        }
+
+        function filterQuestionsList() {
+            const tingkatan = document.getElementById('filterTingkatan').value;
+            const subject = document.getElementById('filterSubject').value;
+            
+            let filteredQuestions = questions;
+            
+            if (tingkatan !== 'all') {
+                filteredQuestions = filteredQuestions.filter(q => q.tingkatan == tingkatan);
+            }
+            
+            if (subject !== 'all') {
+                filteredQuestions = filteredQuestions.filter(q => q.subject === subject);
+            }
+            
+            displayQuestionsList(filteredQuestions);
+        }
+
+        function displayQuestionsList(questionsList) {
+            const container = document.getElementById('questionsList');
+            const noQuestionsMessage = document.getElementById('noQuestionsMessage');
+            
+            if (questionsList.length === 0) {
+                noQuestionsMessage.style.display = 'block';
+                container.innerHTML = '';
+                return;
+            }
+            
+            noQuestionsMessage.style.display = 'none';
+            
+            let html = '<div style="display: grid; gap: 10px;">';
+            questionsList.forEach(question => {
+                const subjectName = getSubjectName(question.subject);
+                
+                html += `
+                    <div style="padding: 15px; background: #f8f9fa; border-radius: 10px; border-left: 4px solid var(--${question.tingkatan === '4' ? 'tingkatan4' : 'primary'});">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <div style="flex: 1;">
+                                <strong>${subjectName} (T${question.tingkatan})</strong>
+                                <div style="margin-top: 5px; color: #666; font-size: 0.9rem;">
+                                    ${formatDate(question.date)} • ${question.marks} markah
+                                </div>
+                                <div style="margin-top: 10px; font-size: 0.9rem;">
+                                    ${question.text ? question.text.substring(0, 100) + '...' : 'Soalan dengan ' + question.type}
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 5px; margin-left: 10px;">
+                                <button class="btn btn-sm btn-primary edit-list-question" data-id="${question.id}">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn btn-sm btn-danger delete-list-question" data-id="${question.id}">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+            
+            container.innerHTML = html;
+            
+            // Add event listeners to buttons
+            document.querySelectorAll('.edit-list-question').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    editQuestion(this.dataset.id);
+                });
+            });
+            
+            document.querySelectorAll('.delete-list-question').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    deleteQuestion(this.dataset.id);
+                });
+            });
+        }
+
+        function editQuestion(id) {
+            const question = questions.find(q => q.id == id);
+            if (!question) return;
+            
+            document.getElementById('editQuestionId').value = question.id;
+            document.getElementById('questionTingkatan').value = question.tingkatan;
+            document.getElementById('questionSubject').value = question.subject;
+            document.getElementById('questionDate').value = question.date;
+            document.getElementById('questionType').value = question.type;
+            document.getElementById('questionText').value = question.text || '';
+            document.getElementById('questionAnswer').innerHTML = question.answer || '';
+            document.getElementById('questionMarks').value = question.marks || '10';
+            
+            // Handle table
+            if (question.tableHtml) {
+                document.getElementById('questionTablePreview').outerHTML = question.tableHtml;
+            }
+            
+            // Handle image
+            if (question.image) {
+                const img = document.getElementById('imagePreview');
+                img.src = question.image;
+                img.style.display = 'block';
+            }
+            
+            // Show/hide appropriate groups
+            document.getElementById('textQuestionGroup').style.display = question.type === 'table' || question.type === 'image' ? 'none' : 'block';
+            document.getElementById('tableQuestionGroup').style.display = question.type === 'table' || question.type === 'mixed' ? 'block' : 'none';
+            document.getElementById('imageQuestionGroup').style.display = question.type === 'image' || question.type === 'mixed' ? 'block' : 'none';
+            
+            document.getElementById('addQuestionModal').style.display = 'block';
+            document.getElementById('manageQuestionsModal').style.display = 'none';
+        }
+
+        function deleteQuestion(id) {
+            if (!confirm('Adakah anda pasti ingin memadam soalan ini?')) return;
+            
+            questions = questions.filter(q => q.id != id);
+            saveQuestions();
+            filterQuestionsList();
+            loadSubjectQuestions();
+            showNotification('Soalan berjaya dipadam!');
+        }
+
+        function toggleTeacherMode() {
+            if (teacherMode) {
+                teacherMode = false;
+                document.getElementById('teacherButtons').style.display = 'none';
+                document.getElementById('teacherModeToggle').innerHTML = '<i class="fas fa-chalkboard-teacher"></i> Mod Guru';
+                loadSubjectQuestions();
+            } else {
+                document.getElementById('passwordModal').style.display = 'block';
+                document.getElementById('passwordInput').value = '';
+                document.getElementById('passwordInput').focus();
+            }
+        }
+
+        function startTimer() {
+            if (timerInterval) clearInterval(timerInterval);
+            
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                const hours = Math.floor(timerSeconds / 3600);
+                const minutes = Math.floor((timerSeconds % 3600) / 60);
+                const seconds = timerSeconds % 60;
+                
+                document.getElementById('timerDisplay').textContent = 
+                    `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        function submitAllAnswers() {
+            const subjectQuestions = questions.filter(q => q.subject === currentSubject);
+            let answeredCount = 0;
+            
+            subjectQuestions.forEach(question => {
+                const answerInput = document.getElementById(`answer${question.id}`);
+                if (answerInput && answerInput.value.trim()) {
+                    answeredCount++;
+                }
+            });
+            
+            if (answeredCount === 0) {
+                alert('Anda belum menjawab sebarang soalan!');
+                return;
+            }
+            
+            const timeSpent = document.getElementById('timerDisplay').textContent;
+            alert(`Jawapan berjaya dihantar!\n\nSoalan dijawab: ${answeredCount}/${subjectQuestions.length}\nMasa: ${timeSpent}\n\nJawapan anda telah disimpan.`);
+            
+            // Reset timer
+            clearInterval(timerInterval);
+            timerInterval = null;
+            timerSeconds = 0;
+            document.getElementById('timerDisplay').textContent = '00:00:00';
+        }
+
         function formatDate(dateString) {
-            if (!dateString) return 'Tiada tarikh';
             const date = new Date(dateString);
             const options = { day: '2-digit', month: 'long', year: 'numeric' };
             return date.toLocaleDateString('ms-MY', options);
         }
 
-        // Format tarikh pendek
-        function formatShortDate(dateString) {
-            if (!dateString) return '';
-            const date = new Date(dateString);
-            const options = { day: '2-digit', month: 'short', year: 'numeric' };
-            return date.toLocaleDateString('ms-MY', options);
+        function getSubjectName(code) {
+            const allSubjects = [...subjectsData['3'], ...subjectsData['4']];
+            const subject = allSubjects.find(s => s.code === code);
+            return subject ? subject.name : code;
         }
 
-        // Dapatkan tarikh hari ini dalam format YYYY-MM-DD
-        function getTodayDate() {
-            return new Date().toISOString().split('T')[0];
-        }
-
-        // Dapatkan tarikh 30 hari lepas
-        function getLastMonthDate() {
-            const date = new Date();
-            date.setDate(date.getDate() - 30);
-            return date.toISOString().split('T')[0];
-        }
-
-        // Variables
-        let currentTingkatan = '3';
-        let currentSubject = 'bm';
-        let currentQuestionIndex = 0;
-        let questions = {};
-        let notes = {};
-        let archive = {};
-        let teacherMode = false;
-        let timer = { seconds: 0, minutes: 0, hours: 0, interval: null };
-        let currentAnswers = {};
-        let dateFilter = { startDate: null, endDate: null };
-
-        // Initialize app
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('DOM fully loaded');
-            initApp();
-        });
-
-        function initApp() {
-            try {
-                console.log('Starting app initialization...');
-                
-                // Initialize data
-                initData();
-                
-                // Setup semua event listeners
-                setupEventListeners();
-                
-                // Start the app
-                startApp();
-                
-                console.log('App initialized successfully');
-                
-            } catch (error) {
-                console.error('Error initializing app:', error);
-                alert('Terjadi kesalahan dalam memuatkan aplikasi. Sila muat semula halaman. Error: ' + error.message);
-            }
-        }
-
-        // Initialize data
-        function initData() {
-            questions = getQuestions();
-            notes = getNotes();
-            archive = getArchive();
-        }
-
-        // Start app
-        function startApp() {
-            updateTimer();
-            updateUIColors();
-            updateNoteIndicators();
-            loadQuestionsForSubject(currentSubject);
-            
-            // Set default date filter values (last 30 days)
-            const startDate = document.getElementById('startDate');
-            const endDate = document.getElementById('endDate');
-            if (startDate && endDate) {
-                startDate.value = getLastMonthDate();
-                endDate.value = getTodayDate();
-            }
-            
-            // Set default date for new questions
-            const questionDate = document.getElementById('questionDate');
-            if (questionDate) {
-                questionDate.value = getTodayDate();
-            }
-            
-            // Show date filter section
-            const dateFilterSection = document.getElementById('dateFilterSection');
-            if (dateFilterSection) {
-                dateFilterSection.style.display = 'block';
-            }
-        }
-
-        // Setup semua event listeners
-        function setupEventListeners() {
-            console.log('Setting up event listeners...');
-            
-            // Debug: Senarai semua butang yang perlu ada
-            const requiredElements = [
-                'tingkatanToggle', 'subjectsGrid', 'prevQuestion', 'nextQuestion',
-                'applyDateFilter', 'clearDateFilter', 'loadArchiveBtn',
-                'teacherModeToggle', 'submitPassword', 'cancelPassword',
-                'addQuestionBtn', 'manageQuestionsBtn', 'closeAddModal',
-                'closeManageModal', 'addQuestionForm', 'submitAllBtn'
-            ];
-            
-            requiredElements.forEach(id => {
-                const element = document.getElementById(id);
-                console.log(`${id}: ${element ? 'Found' : 'NOT FOUND'}`);
-            });
-            
-            // Setup event listeners dengan error handling
-            try {
-                // Event listeners untuk tingkatan toggle
-                const tingkatanToggle = document.getElementById('tingkatanToggle');
-                if (tingkatanToggle) {
-                    tingkatanToggle.addEventListener('click', handleTingkatanToggle);
-                    console.log('Added listener to tingkatanToggle');
-                }
-
-                // Event listeners untuk mata pelajaran
-                const subjectsGrid = document.getElementById('subjectsGrid');
-                if (subjectsGrid) {
-                    subjectsGrid.addEventListener('click', handleSubjectClick);
-                    console.log('Added listener to subjectsGrid');
-                }
-
-                // Event listeners untuk navigasi soalan
-                const prevQuestionBtn = document.getElementById('prevQuestion');
-                if (prevQuestionBtn) {
-                    prevQuestionBtn.addEventListener('click', handlePrevQuestion);
-                    console.log('Added listener to prevQuestion');
-                }
-
-                const nextQuestionBtn = document.getElementById('nextQuestion');
-                if (nextQuestionBtn) {
-                    nextQuestionBtn.addEventListener('click', handleNextQuestion);
-                    console.log('Added listener to nextQuestion');
-                }
-
-                // Event listener untuk date filter
-                const applyDateFilter = document.getElementById('applyDateFilter');
-                if (applyDateFilter) {
-                    applyDateFilter.addEventListener('click', handleApplyDateFilter);
-                    console.log('Added listener to applyDateFilter');
-                }
-
-                const clearDateFilter = document.getElementById('clearDateFilter');
-                if (clearDateFilter) {
-                    clearDateFilter.addEventListener('click', handleClearDateFilter);
-                    console.log('Added listener to clearDateFilter');
-                }
-
-                // Event listener untuk archive
-                const loadArchiveBtn = document.getElementById('loadArchiveBtn');
-                if (loadArchiveBtn) {
-                    loadArchiveBtn.addEventListener('click', handleLoadArchive);
-                    console.log('Added listener to loadArchiveBtn');
-                }
-
-                // Event listener untuk mod guru
-                const teacherModeToggle = document.getElementById('teacherModeToggle');
-                if (teacherModeToggle) {
-                    teacherModeToggle.addEventListener('click', handleTeacherModeToggle);
-                    console.log('Added listener to teacherModeToggle');
-                }
-
-                // Event listener untuk password
-                const submitPassword = document.getElementById('submitPassword');
-                if (submitPassword) {
-                    submitPassword.addEventListener('click', handleSubmitPassword);
-                    console.log('Added listener to submitPassword');
-                }
-
-                const cancelPassword = document.getElementById('cancelPassword');
-                if (cancelPassword) {
-                    cancelPassword.addEventListener('click', handleCancelPassword);
-                    console.log('Added listener to cancelPassword');
-                }
-
-                // Event listener untuk tambah soalan
-                const addQuestionBtn = document.getElementById('addQuestionBtn');
-                if (addQuestionBtn) {
-                    addQuestionBtn.addEventListener('click', handleAddQuestion);
-                    console.log('Added listener to addQuestionBtn');
-                }
-
-                // Event listener untuk urus soalan
-                const manageQuestionsBtn = document.getElementById('manageQuestionsBtn');
-                if (manageQuestionsBtn) {
-                    manageQuestionsBtn.addEventListener('click', handleManageQuestions);
-                    console.log('Added listener to manageQuestionsBtn');
-                }
-
-                // Event listener untuk tutup modal
-                const closeAddModal = document.getElementById('closeAddModal');
-                if (closeAddModal) {
-                    closeAddModal.addEventListener('click', () => {
-                        document.getElementById('addQuestionModal').style.display = 'none';
-                    });
-                    console.log('Added listener to closeAddModal');
-                }
-
-                const closeManageModal = document.getElementById('closeManageModal');
-                if (closeManageModal) {
-                    closeManageModal.addEventListener('click', () => {
-                        document.getElementById('manageQuestionsModal').style.display = 'none';
-                    });
-                    console.log('Added listener to closeManageModal');
-                }
-
-                // Event listener untuk form tambah soalan
-                const addQuestionForm = document.getElementById('addQuestionForm');
-                if (addQuestionForm) {
-                    addQuestionForm.addEventListener('submit', handleAddQuestionFormSubmit);
-                    console.log('Added listener to addQuestionForm');
-                }
-
-                // Event listener untuk hantar jawapan
-                const submitAllBtn = document.getElementById('submitAllBtn');
-                if (submitAllBtn) {
-                    submitAllBtn.addEventListener('click', handleSubmitAllAnswers);
-                    console.log('Added listener to submitAllBtn');
-                }
-                
-                console.log('All event listeners set up successfully');
-                
-            } catch (error) {
-                console.error('Error setting up event listeners:', error);
-            }
-        }
-
-        // Handle tingkatan toggle
-        function handleTingkatanToggle(e) {
-            console.log('Tingkatan toggle clicked', e.target);
-            const tingkatanBtn = e.target.closest('.tingkatan-btn');
-            if (tingkatanBtn) {
-                const tingkatan = tingkatanBtn.dataset.tingkatan;
-                console.log('Switching to tingkatan:', tingkatan);
-                switchTingkatan(tingkatan);
-            }
-        }
-
-        // Handle subject click
-        function handleSubjectClick(e) {
-            console.log('Subject clicked', e.target);
-            const subjectCard = e.target.closest('.subject-card');
-            if (subjectCard) {
-                const subject = subjectCard.dataset.subject;
-                console.log('Changing to subject:', subject);
-                changeSubject(subject);
-            }
-        }
-
-        // Handle prev question
-        function handlePrevQuestion() {
-            console.log('Previous question clicked');
-            if (currentQuestionIndex > 0) {
-                saveCurrentAnswer();
-                currentQuestionIndex--;
-                displayQuestion();
-            }
-        }
-
-        // Handle next question
-        function handleNextQuestion() {
-            console.log('Next question clicked');
-            const subjectQuestions = questions[currentSubject] || [];
-            if (currentQuestionIndex < subjectQuestions.length - 1) {
-                saveCurrentAnswer();
-                currentQuestionIndex++;
-                displayQuestion();
-            }
-        }
-
-        // Handle apply date filter
-        function handleApplyDateFilter() {
-            const startDate = document.getElementById('startDate');
-            const endDate = document.getElementById('endDate');
-            
-            if (startDate && endDate) {
-                dateFilter.startDate = startDate.value || null;
-                dateFilter.endDate = endDate.value || null;
-                
-                updateDateFilterStatus();
-                loadQuestionsForSubject(currentSubject);
-            }
-        }
-
-        // Handle clear date filter
-        function handleClearDateFilter() {
-            const startDate = document.getElementById('startDate');
-            const endDate = document.getElementById('endDate');
-            const dateFilterStatus = document.getElementById('dateFilterStatus');
-            
-            if (startDate && endDate) {
-                startDate.value = '';
-                endDate.value = '';
-                dateFilter.startDate = null;
-                dateFilter.endDate = null;
-                
-                if (dateFilterStatus) {
-                    dateFilterStatus.innerHTML = '';
-                }
-                
-                loadQuestionsForSubject(currentSubject);
-            }
-        }
-
-        // Handle load archive
-        function handleLoadArchive() {
-            console.log('Load archive clicked');
-            loadAllArchive();
-        }
-
-        // Handle teacher mode toggle
-        function handleTeacherModeToggle() {
-            console.log('Teacher mode toggle clicked');
-            if (!teacherMode) {
-                document.getElementById('passwordModal').style.display = 'block';
-                document.getElementById('passwordInput').focus();
-            } else {
-                teacherMode = false;
-                document.getElementById('teacherModeToggle').innerHTML = '<i class="fas fa-chalkboard-teacher"></i> Mod Guru';
-                document.getElementById('teacherButtons').style.display = 'none';
-                loadQuestionsForSubject(currentSubject);
-            }
-        }
-
-        // Handle submit password
-        function handleSubmitPassword() {
-            const passwordInput = document.getElementById('passwordInput');
-            if (passwordInput.value === 'walid82') {
-                teacherMode = true;
-                document.getElementById('teacherModeToggle').innerHTML = '<i class="fas fa-user-graduate"></i> Mod Pelajar';
-                document.getElementById('teacherButtons').style.display = 'block';
-                document.getElementById('passwordModal').style.display = 'none';
-                passwordInput.value = '';
-                loadQuestionsForSubject(currentSubject);
-            } else {
-                alert('Kata laluan salah!');
-                passwordInput.value = '';
-                passwordInput.focus();
-            }
-        }
-
-        // Handle cancel password
-        function handleCancelPassword() {
-            document.getElementById('passwordModal').style.display = 'none';
-            document.getElementById('passwordInput').value = '';
-        }
-
-        // Handle add question
-        function handleAddQuestion() {
-            const questionTingkatan = document.getElementById('questionTingkatan');
-            if (questionTingkatan) {
-                questionTingkatan.value = currentTingkatan;
-            }
-            
-            const questionDate = document.getElementById('questionDate');
-            if (questionDate) {
-                questionDate.value = getTodayDate();
-            }
-            
-            document.getElementById('addQuestionModal').style.display = 'block';
-        }
-
-        // Handle manage questions
-        function handleManageQuestions() {
-            loadQuestionsList();
-            document.getElementById('manageQuestionsModal').style.display = 'block';
-        }
-
-        // Handle add question form submit
-        function handleAddQuestionFormSubmit(e) {
-            e.preventDefault();
-            
-            const tingkatan = document.getElementById('questionTingkatan').value;
-            const subject = document.getElementById('questionSubject').value;
-            const date = document.getElementById('questionDate').value;
-            const text = document.getElementById('questionText').value;
-            const answer = document.getElementById('questionAnswer').innerHTML;
-            const marks = parseInt(document.getElementById('questionMarks').value);
-            const tags = document.getElementById('questionTags').value.split(',').map(tag => tag.trim()).filter(tag => tag !== '');
-            const questionId = document.getElementById('editQuestionId').value;
-            
-            if (!tingkatan || !subject || !date || !text) {
-                alert('Sila isi semua maklumat yang diperlukan');
-                return;
-            }
-            
-            const allQuestions = getQuestions();
-            if (!allQuestions[subject]) {
-                allQuestions[subject] = [];
-            }
-            
-            if (questionId) {
-                // Edit soalan sedia ada
-                const index = allQuestions[subject].findIndex(q => q.id == questionId);
-                if (index !== -1) {
-                    allQuestions[subject][index] = { 
-                        id: parseInt(questionId), 
-                        text, 
-                        answer, 
-                        marks,
-                        tingkatan: parseInt(tingkatan),
-                        date,
-                        tags
-                    };
-                }
-            } else {
-                // Tambah soalan baru
-                const maxId = Math.max(...Object.values(allQuestions).flat().map(q => q.id || 0), 0);
-                allQuestions[subject].push({ 
-                    id: maxId + 1, 
-                    text, 
-                    answer, 
-                    marks,
-                    tingkatan: parseInt(tingkatan),
-                    date,
-                    tags
-                });
-            }
-            
-            saveQuestions(allQuestions);
-            document.getElementById('addQuestionModal').style.display = 'none';
-            loadQuestionsForSubject(currentSubject);
-            
-            showNotification(questionId ? 'Soalan berjaya dikemaskini' : 'Soalan berjaya ditambah', 'success');
-        }
-
-        // Handle submit all answers
-        function handleSubmitAllAnswers() {
-            saveCurrentAnswer();
-            stopTimer();
-            
-            if (Object.keys(currentAnswers).length === 0) {
-                alert('Anda belum menjawab sebarang soalan!');
-                return;
-            }
-            
-            const totalTime = formatTime();
-            const answeredCount = Object.keys(currentAnswers).length;
-            
-            // Archive answered questions
-            const allArchive = getArchive();
-            if (!allArchive[currentSubject]) {
-                allArchive[currentSubject] = [];
-            }
-            
-            const subjectQuestions = questions[currentSubject] || [];
-            Object.keys(currentAnswers).forEach(questionId => {
-                const question = subjectQuestions.find(q => q.id == questionId);
-                if (question) {
-                    // Check if already archived
-                    const existingIndex = allArchive[currentSubject].findIndex(q => q.id == question.id);
-                    if (existingIndex === -1) {
-                        allArchive[currentSubject].push(question);
-                    }
-                }
-            });
-            
-            saveArchive(allArchive);
-            
-            alert(`Jawapan berjaya dihantar!\nMasa menjawab: ${totalTime}\nJumlah soalan dijawab: ${answeredCount}\n${answeredCount} soalan telah diarkibkan untuk rujukan masa depan.`);
-            
-            // Reset
-            currentAnswers = {};
-            resetTimer();
-            loadQuestionsForSubject(currentSubject);
-        }
-
-        // Format masa
-        function formatTime() {
-            return `${timer.hours.toString().padStart(2, '0')}:${timer.minutes.toString().padStart(2, '0')}:${timer.seconds.toString().padStart(2, '0')}`;
-        }
-
-        // Update timer
-        function updateTimer() {
-            const timerDisplay = document.getElementById('timerDisplay');
-            if (timerDisplay) {
-                timerDisplay.textContent = formatTime();
-            }
-        }
-
-        // Start timer
-        function startTimer() {
-            if (timer.interval) return;
-            timer.interval = setInterval(() => {
-                timer.seconds++;
-                if (timer.seconds >= 60) {
-                    timer.seconds = 0;
-                    timer.minutes++;
-                    if (timer.minutes >= 60) {
-                        timer.minutes = 0;
-                        timer.hours++;
-                    }
-                }
-                updateTimer();
-            }, 1000);
-        }
-
-        // Stop timer
-        function stopTimer() {
-            if (timer.interval) {
-                clearInterval(timer.interval);
-                timer.interval = null;
-            }
-        }
-
-        // Reset timer
-        function resetTimer() {
-            stopTimer();
-            timer = { seconds: 0, minutes: 0, hours: 0, interval: null };
-            updateTimer();
-        }
-
-        // Toggle antara Tingkatan 3 dan 4
-        function switchTingkatan(tingkatan) {
-            currentTingkatan = tingkatan;
-            
-            // Update active button
-            const tingkatanButtons = document.querySelectorAll('.tingkatan-btn');
-            tingkatanButtons.forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.tingkatan === tingkatan) {
-                    btn.classList.add('active');
-                }
-            });
-            
-            // Update UI colors
-            updateUIColors();
-            
-            // Show/hide subjects based on tingkatan
-            document.querySelectorAll('.subject-card').forEach(card => {
-                if (card.dataset.tingkatan === tingkatan) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-            
-            // Reset to first subject of selected tingkatan
-            const firstSubject = document.querySelector(`.subject-card[data-tingkatan="${tingkatan}"]`);
-            if (firstSubject) {
-                changeSubject(firstSubject.dataset.subject);
-            }
-            
-            // Update note indicators
-            updateNoteIndicators();
-        }
-
-        // Update UI colors based on tingkatan
-        function updateUIColors() {
-            const isTingkatan4 = currentTingkatan === '4';
-            const colorClass = isTingkatan4 ? 'tingkatan4' : '';
-            
-            // Update card borders
-            const subjectsCard = document.getElementById('subjectsCard');
-            const questionsCard = document.getElementById('questionsCard');
-            const timerContainer = document.getElementById('timerContainer');
-            
-            if (subjectsCard) subjectsCard.className = `card ${colorClass}`;
-            if (questionsCard) questionsCard.className = `card ${colorClass}`;
-            if (timerContainer) timerContainer.className = `timer-container ${colorClass}`;
-            
-            // Update progress bar
-            const progressFill = document.getElementById('progressFill');
-            if (progressFill) {
-                progressFill.className = `progress-fill ${colorClass}`;
-            }
-            
-            // Update subject cards
-            document.querySelectorAll('.subject-card').forEach(card => {
-                if (card.dataset.tingkatan === currentTingkatan) {
-                    card.className = `subject-card ${colorClass}`;
-                }
-            });
-            
-            // Update question number
-            const questionNum = document.querySelector('.question-number');
-            if (questionNum) {
-                questionNum.className = `question-number ${colorClass}`;
-            }
-            
-            // Update answer section
-            const answerSection = document.querySelector('.answer-section');
-            if (answerSection) {
-                answerSection.className = `answer-section ${colorClass}`;
-            }
-            
-            // Update buttons
-            const prevQuestionBtn = document.getElementById('prevQuestion');
-            const nextQuestionBtn = document.getElementById('nextQuestion');
-            if (prevQuestionBtn) prevQuestionBtn.className = `btn btn-primary ${colorClass}`;
-            if (nextQuestionBtn) nextQuestionBtn.className = `btn btn-primary ${colorClass}`;
-            
-            // Update answer area focus
-            const answerAreas = document.querySelectorAll('.answer-area');
-            answerAreas.forEach(area => {
-                area.className = `answer-area ${colorClass}`;
-            });
-        }
-
-        // Update note indicators on subject cards
-        function updateNoteIndicators() {
-            const allNotes = getNotes();
-            
-            // Update indicators for all subjects
-            Object.keys(allNotes).forEach(subject => {
-                const indicator = document.getElementById(`noteIndicator-${subject}`);
-                if (indicator && allNotes[subject] && allNotes[subject].trim() !== '') {
-                    indicator.classList.add('has-note');
-                } else if (indicator) {
-                    indicator.classList.remove('has-note');
-                }
-            });
-        }
-
-        // Filter soalan berdasarkan tarikh
-        function filterQuestionsByDate(subjectQuestions) {
-            if (!dateFilter.startDate && !dateFilter.endDate) {
-                return subjectQuestions;
-            }
-            
-            return subjectQuestions.filter(question => {
-                const questionDate = question.date || '1970-01-01';
-                
-                if (dateFilter.startDate && dateFilter.endDate) {
-                    return questionDate >= dateFilter.startDate && questionDate <= dateFilter.endDate;
-                } else if (dateFilter.startDate) {
-                    return questionDate >= dateFilter.startDate;
-                } else if (dateFilter.endDate) {
-                    return questionDate <= dateFilter.endDate;
-                }
-                return true;
-            });
-        }
-
-        // Load soalan untuk subjek dengan filter tarikh
-        function loadQuestionsForSubject(subject) {
-            questions = getQuestions();
-            let subjectQuestions = questions[subject] || [];
-            
-            // Apply date filter
-            subjectQuestions = filterQuestionsByDate(subjectQuestions);
-            
-            // Sort by date (newest first)
-            subjectQuestions.sort((a, b) => new Date(b.date || '1970-01-01') - new Date(a.date || '1970-01-01'));
-            
-            const questionsContainer = document.getElementById('questionsContainer');
-            const prevQuestionBtn = document.getElementById('prevQuestion');
-            const nextQuestionBtn = document.getElementById('nextQuestion');
-            const questionCount = document.getElementById('questionCount');
-            const archiveSection = document.getElementById('archiveSection');
-            
-            if (subjectQuestions.length === 0) {
-                if (questionsContainer) {
-                    questionsContainer.innerHTML = `
-                        <div class="question-container">
-                            <p style="text-align:center; color:#666; padding:30px;">
-                                <i class="fas fa-question-circle" style="font-size:3rem; margin-bottom:15px; display:block;"></i>
-                                Tiada soalan untuk mata pelajaran ini${dateFilter.startDate || dateFilter.endDate ? ' dalam tempoh tarikh yang dipilih' : ''}.
-                            </p>
-                        </div>
-                    `;
-                }
-                
-                if (prevQuestionBtn) prevQuestionBtn.disabled = true;
-                if (nextQuestionBtn) nextQuestionBtn.disabled = true;
-                if (questionCount) questionCount.textContent = 'Tiada soalan';
-                
-                // Hide archive section if no questions
-                if (archiveSection) {
-                    archiveSection.style.display = 'none';
-                }
-                
-                return;
-            }
-            
-            currentQuestionIndex = 0;
-            displayQuestion();
-            
-            // Show archive section
-            loadArchiveData();
-        }
-
-        // Load archive data for current subject
-        function loadArchiveData() {
-            const allArchive = getArchive();
-            const subjectArchive = allArchive[currentSubject] || [];
-            const archiveSection = document.getElementById('archiveSection');
-            
-            if (subjectArchive.length > 0) {
-                if (archiveSection) {
-                    archiveSection.style.display = 'block';
-                }
-                displayArchiveList(subjectArchive.slice(0, 5)); // Show first 5 archives
-            } else if (archiveSection) {
-                archiveSection.style.display = 'none';
-            }
-        }
-
-        // Display archive list
-        function displayArchiveList(archives) {
-            const archiveList = document.getElementById('archiveList');
-            if (!archiveList) return;
-            
-            archiveList.innerHTML = '';
-            
-            if (archives.length === 0) {
-                archiveList.innerHTML = `
-                    <div class="no-archive-message">
-                        <i class="fas fa-archive" style="font-size: 2rem; margin-bottom: 10px;"></i><br>
-                        Tiada arkib soalan lepas untuk mata pelajaran ini.
-                    </div>
-                `;
-                return;
-            }
-            
-            // Group archives by date
-            const archivesByDate = {};
-            archives.forEach(archive => {
-                const date = archive.date || 'Tiada tarikh';
-                if (!archivesByDate[date]) {
-                    archivesByDate[date] = [];
-                }
-                archivesByDate[date].push(archive);
-            });
-            
-            // Create archive items
-            Object.keys(archivesByDate).sort().reverse().forEach(date => {
-                const archiveItem = document.createElement('div');
-                archiveItem.className = 'archive-item';
-                archiveItem.dataset.date = date;
-                
-                const count = archivesByDate[date].length;
-                archiveItem.innerHTML = `
-                    <div class="archive-date">
-                        <i class="fas fa-calendar-day"></i>
-                        ${formatDate(date)}
-                    </div>
-                    <div class="archive-count">${count} soalan</div>
-                `;
-                
-                archiveItem.addEventListener('click', () => {
-                    // Remove selected class from all items
-                    document.querySelectorAll('.archive-item').forEach(item => {
-                        item.classList.remove('selected');
-                    });
-                    
-                    // Add selected class to clicked item
-                    archiveItem.classList.add('selected');
-                    
-                    // Load questions from this archive date
-                    loadArchiveQuestions(date);
-                });
-                
-                archiveList.appendChild(archiveItem);
-            });
-        }
-
-        // Load questions from archive date
-        function loadArchiveQuestions(date) {
-            const allArchive = getArchive();
-            const subjectArchive = allArchive[currentSubject] || [];
-            
-            const archiveQuestions = subjectArchive.filter(q => q.date === date);
-            
-            if (archiveQuestions.length > 0) {
-                // Save current questions to restore later
-                if (!window.currentQuestionsBackup) {
-                    window.currentQuestionsBackup = questions[currentSubject] || [];
-                }
-                
-                // Load archive questions
-                questions[currentSubject] = archiveQuestions;
-                currentQuestionIndex = 0;
-                displayQuestion();
-                
-                // Update filter status
-                const dateFilterStatus = document.getElementById('dateFilterStatus');
-                if (dateFilterStatus) {
-                    dateFilterStatus.innerHTML = `
-                        <i class="fas fa-info-circle"></i> Memaparkan arkib: ${formatDate(date)}
-                    `;
-                }
-            }
-        }
-
-        // Load all archive questions
-        function loadAllArchive() {
-            const allArchive = getArchive();
-            const subjectArchive = allArchive[currentSubject] || [];
-            
-            if (subjectArchive.length > 0) {
-                // Save current questions to restore later
-                if (!window.currentQuestionsBackup) {
-                    window.currentQuestionsBackup = questions[currentSubject] || [];
-                }
-                
-                // Load all archive questions
-                questions[currentSubject] = subjectArchive;
-                currentQuestionIndex = 0;
-                displayQuestion();
-                
-                // Update filter status
-                const dateFilterStatus = document.getElementById('dateFilterStatus');
-                if (dateFilterStatus) {
-                    dateFilterStatus.innerHTML = `
-                        <i class="fas fa-info-circle"></i> Memaparkan semua arkib (${subjectArchive.length} soalan)
-                    `;
-                }
-                
-                // Display all archive items
-                displayArchiveList(subjectArchive);
-            }
-        }
-
-        // Papar soalan dengan nota
-        function displayQuestion() {
-            const subjectQuestions = questions[currentSubject] || [];
-            if (subjectQuestions.length === 0) return;
-            
-            const question = subjectQuestions[currentQuestionIndex];
-            const isMath = currentSubject.includes('math');
-            const currentNote = notes[currentSubject] || '';
-            
-            // Simpan jawapan semasa sebelum papar soalan baru
-            saveCurrentAnswer();
-            
-            let answerHTML = '';
-            if (teacherMode && question.answer) {
-                answerHTML = `
-                    <div class="teacher-answer-section">
-                        <h4><i class="fas fa-key"></i> Jawapan Contoh</h4>
-                        <div class="teacher-answer-content">${question.answer}</div>
-                    </div>
-                `;
-            }
-            
-            // Buat nota section
-            let noteHTML = '';
-            if (teacherMode) {
-                // Mod Guru: Boleh edit nota
-                noteHTML = `
-                    <div class="note-section">
-                        <h3><i class="fas fa-sticky-note"></i> Nota Mata Pelajaran</h3>
-                        <div class="note-content editable" id="noteContent" contenteditable="true">${currentNote}</div>
-                        <div class="note-actions" id="noteActions">
-                            <button class="btn btn-sm btn-note" id="saveNoteBtn">
-                                <i class="fas fa-save"></i> Simpan Nota
-                            </button>
-                            <button class="btn btn-sm btn-warning" id="clearNoteBtn">
-                                <i class="fas fa-eraser"></i> Kosongkan Nota
-                            </button>
-                        </div>
-                    </div>
-                `;
-            } else if (currentNote.trim() !== '') {
-                // Mod Pelajar: Hanya baca nota
-                noteHTML = `
-                    <div class="note-section">
-                        <h3><i class="fas fa-sticky-note"></i> Nota Mata Pelajaran</h3>
-                        <div class="note-content readonly">${currentNote}</div>
-                    </div>
-                `;
-            }
-            
-            let studentAnswerHTML = '';
-            if (isMath) {
-                studentAnswerHTML = `
-                    <div class="answer-section ${currentTingkatan === '4' ? 'tingkatan4' : ''}">
-                        <h3><i class="fas fa-pen"></i> Jawapan</h3>
-                        
-                        <div class="symbol-section">
-                            <h4><i class="fas fa-superscript"></i> Simbol Matematik</h4>
-                            <p style="margin-bottom:10px; color:#666; font-size:0.9rem;">Klik simbol untuk menyalin:</p>
-                            <div class="math-symbols" id="mathSymbols${question.id}">
-                                <button class="symbol-btn" data-symbol="²" title="Kuasa dua">²</button>
-                                <button class="symbol-btn" data-symbol="⁰" title="Kuasa sifar">⁰</button>
-                                <button class="symbol-btn" data-symbol="¹" title="Kuasa satu">¹</button>
-                                <button class="symbol-btn" data-symbol="³" title="Kuasa tiga">³</button>
-                                <button class="symbol-btn" data-symbol="√" title="Punca kuasa dua">√</button>
-                                <button class="symbol-btn" data-symbol="^" title="Kuasa">^</button>
-                                <button class="symbol-btn" data-symbol="⁴" title="Kuasa empat">⁴</button>
-                                <button class="symbol-btn" data-symbol="⁵" title="Kuasa lima">⁵</button>
-                                <button class="symbol-btn" data-symbol="⁶" title="Kuasa enam">⁶</button>
-                                <button class="symbol-btn" data-symbol="⁷" title="Kuasa tujuh">⁷</button>
-                                <button class="symbol-btn" data-symbol="⁸" title="Kuasa lapan">⁸</button>
-                                <button class="symbol-btn" data-symbol="⁹" title="Kuasa sembilan">⁹</button>
-                                <button class="symbol-btn" data-symbol="⁺" title="Tambah">⁺</button>
-                                <button class="symbol-btn" data-symbol="⁻" title="Tolak">⁻</button>
-                                <button class="symbol-btn" data-symbol="ˣ" title="Darab">ˣ</button>
-                                <button class="symbol-btn" data-symbol="ᐟ" title="Bahagi">ᐟ</button>
-                                <button class="symbol-btn" data-symbol="‧" title="Titik perpuluhan">‧</button>
-                                <button class="symbol-btn" data-symbol="⁼" title="Sama dengan">⁼</button>
-                                <button class="symbol-btn" data-symbol="⁽" title="Kurungan buka">⁽</button>
-                                <button class="symbol-btn" data-symbol="⁾" title="Kurungan tutup">⁾</button>
-                                <button class="symbol-btn" data-symbol="ⁿ" title="Kuasa n">ⁿ</button>
-                                <button class="symbol-btn" data-symbol="π" title="Pi">π</button>
-                                <button class="symbol-btn" data-symbol="°" title="Darjah">°</button>
-                                <button class="symbol-btn" data-symbol="≈" title="Hampir sama dengan">≈</button>
-                                <button class="symbol-btn" data-symbol="∞" title="Infiniti">∞</button>
-                                <button class="symbol-btn" data-symbol="∆" title="Delta">∆</button>
-                                <button class="symbol-btn" data-symbol="∑" title="Jumlah">∑</button>
-                                <button class="symbol-btn" data-symbol="∫" title="Integral">∫</button>
-                                <button class="symbol-btn" data-symbol="∠" title="Sudut">∠</button>
-                                <button class="symbol-btn" data-symbol="∥" title="Selari">∥</button>
-                                <button class="symbol-btn" data-symbol="⊥" title="Serenjang">⊥</button>
-                                <button class="symbol-btn" data-symbol="α" title="Alpha">α</button>
-                                <button class="symbol-btn" data-symbol="β" title="Beta">β</button>
-                                <button class="symbol-btn" data-symbol="θ" title="Theta">θ</button>
-                            </div>
-                            <div class="clear-buttons">
-                                <button type="button" class="btn btn-sm btn-danger" id="clearAnswer${question.id}" style="padding: 5px 10px;">
-                                    <i class="fas fa-eraser"></i> Kosongkan Jawapan
-                                </button>
-                                <button type="button" class="btn btn-sm btn-primary" id="clearMathAnswer${question.id}" style="padding: 5px 10px;">
-                                    <i class="fas fa-eraser"></i> Kosongkan Jalan Kira
-                                </button>
-                            </div>
-                        </div>
-                        
-                        <textarea class="answer-area ${currentTingkatan === '4' ? 'tingkatan4' : ''}" id="answer${question.id}" placeholder="Tulis jawapan akhir anda di sini...">${currentAnswers[question.id]?.answer || ''}</textarea>
-                        
-                        <div class="math-extra-answer">
-                            <h4><i class="fas fa-calculator"></i> Jalan Kira/Langkah Kerja</h4>
-                            <textarea class="answer-area ${currentTingkatan === '4' ? 'tingkatan4' : ''}" id="mathAnswer${question.id}" placeholder="Tunjukkan jalan kira/langkah kerja anda di sini...">${currentAnswers[question.id]?.mathAnswer || ''}</textarea>
-                        </div>
-                    </div>
-                `;
-            } else {
-                studentAnswerHTML = `
-                    <div class="answer-section ${currentTingkatan === '4' ? 'tingkatan4' : ''}">
-                        <h3><i class="fas fa-pen"></i> Jawapan</h3>
-                        <textarea class="answer-area ${currentTingkatan === '4' ? 'tingkatan4' : ''}" id="answer${question.id}" placeholder="Tulis jawapan anda di sini...">${currentAnswers[question.id]?.answer || ''}</textarea>
-                    </div>
-                `;
-            }
-            
-            // Display tags if available
-            let tagsHTML = '';
-            if (question.tags && question.tags.length > 0) {
-                tagsHTML = `
-                    <div style="margin-top: 10px;">
-                        <small style="color: #6c757d;">
-                            <i class="fas fa-tags"></i> 
-                            ${question.tags.map(tag => `<span style="background: #e9ecef; padding: 2px 8px; border-radius: 12px; margin-right: 5px;">${tag}</span>`).join('')}
-                        </small>
-                    </div>
-                `;
-            }
-            
-            const questionsContainer = document.getElementById('questionsContainer');
-            if (questionsContainer) {
-                questionsContainer.innerHTML = `
-                    <div class="question-container">
-                        <div class="question-header">
-                            <div class="question-number ${currentTingkatan === '4' ? 'tingkatan4' : ''}">${currentQuestionIndex + 1}</div>
-                            <div class="question-date">
-                                <i class="fas fa-calendar-alt"></i> ${formatDate(question.date)}
-                            </div>
-                        </div>
-                        <div class="question-text">${question.text}</div>
-                        ${tagsHTML}
-                        ${noteHTML}
-                        ${studentAnswerHTML}
-                        ${answerHTML}
-                    </div>
-                `;
-                
-                // Setup event listener untuk start timer
-                const answerTextarea = document.getElementById(`answer${question.id}`);
-                if (answerTextarea) {
-                    answerTextarea.addEventListener('input', () => {
-                        if (!timer.interval) {
-                            startTimer();
-                        }
-                    });
-                }
-                
-                const mathAnswerTextarea = document.getElementById(`mathAnswer${question.id}`);
-                if (mathAnswerTextarea) {
-                    mathAnswerTextarea.addEventListener('input', () => {
-                        if (!timer.interval) {
-                            startTimer();
-                        }
-                    });
-                }
-                
-                // Setup event listener untuk nota (mod guru)
-                if (teacherMode) {
-                    const saveNoteBtn = document.getElementById('saveNoteBtn');
-                    const clearNoteBtn = document.getElementById('clearNoteBtn');
-                    const noteContent = document.getElementById('noteContent');
-                    
-                    if (saveNoteBtn) {
-                        saveNoteBtn.addEventListener('click', saveCurrentNote);
-                    }
-                    
-                    if (clearNoteBtn) {
-                        clearNoteBtn.addEventListener('click', () => {
-                            if (confirm('Adakah anda pasti ingin mengosongkan nota ini?')) {
-                                noteContent.innerHTML = '';
-                            }
-                        });
-                    }
-                    
-                    // Auto-save note on blur
-                    if (noteContent) {
-                        noteContent.addEventListener('blur', saveCurrentNote);
-                    }
-                }
-                
-                // Setup event listener untuk simbol matematik
-                if (isMath) {
-                    setupMathSymbols(question.id);
-                }
-                
-                // Update UI
-                updateQuestionUI();
-            }
-        }
-
-        // Simpan nota semasa
-        function saveCurrentNote() {
-            const noteContent = document.getElementById('noteContent');
-            if (!noteContent) return;
-            
-            const noteText = noteContent.innerHTML.trim();
-            notes[currentSubject] = noteText;
-            saveNotes(notes);
-            
-            // Update indicator
-            const indicator = document.getElementById(`noteIndicator-${currentSubject}`);
-            if (indicator) {
-                if (noteText !== '') {
-                    indicator.classList.add('has-note');
-                } else {
-                    indicator.classList.remove('has-note');
-                }
-            }
-            
-            // Show confirmation
-            showNotification('Nota berjaya disimpan!', 'success');
-        }
-
-        // Tukar subjek
-        function changeSubject(subject) {
-            // Reset active class
-            document.querySelectorAll('.subject-card').forEach(card => {
-                card.classList.remove('active');
-            });
-            
-            // Set active class untuk subjek baru
-            const activeCard = document.querySelector(`[data-subject="${subject}"]`);
-            if (activeCard) {
-                activeCard.classList.add('active');
-            }
-            
-            // Simpan jawapan semasa sebelum tukar subjek
-            saveCurrentAnswer();
-            
-            // Stop timer bila tukar subjek
-            stopTimer();
-            
-            // Update subjek semasa
-            currentSubject = subject;
-            currentQuestionIndex = 0;
-            
-            // Show date filter section
-            const dateFilterSection = document.getElementById('dateFilterSection');
-            if (dateFilterSection) {
-                dateFilterSection.style.display = 'block';
-            }
-            
-            // Load soalan untuk subjek baru
-            loadQuestionsForSubject(subject);
-            
-            // Update note indicators
-            updateNoteIndicators();
-        }
-
-        // Apply date filter
-        function updateDateFilterStatus() {
-            const dateFilterStatus = document.getElementById('dateFilterStatus');
-            if (!dateFilterStatus) return;
-            
-            if (!dateFilter.startDate && !dateFilter.endDate) {
-                dateFilterStatus.innerHTML = '';
-                return;
-            }
-            
-            let status = '<i class="fas fa-filter"></i> Ditapis: ';
-            
-            if (dateFilter.startDate && dateFilter.endDate) {
-                status += `${formatShortDate(dateFilter.startDate)} - ${formatShortDate(dateFilter.endDate)}`;
-            } else if (dateFilter.startDate) {
-                status += `Selepas ${formatShortDate(dateFilter.startDate)}`;
-            } else if (dateFilter.endDate) {
-                status += `Sebelum ${formatShortDate(dateFilter.endDate)}`;
-            }
-            
-            dateFilterStatus.innerHTML = status;
-        }
-
-        // Archive question
-        function archiveQuestion(questionId) {
-            const allQuestions = getQuestions();
-            const allArchive = getArchive();
-            
-            const question = allQuestions[currentSubject]?.find(q => q.id == questionId);
-            if (!question) return;
-            
-            // Add to archive
-            if (!allArchive[currentSubject]) {
-                allArchive[currentSubject] = [];
-            }
-            
-            // Check if question already in archive
-            const existingIndex = allArchive[currentSubject].findIndex(q => q.id == questionId);
-            if (existingIndex === -1) {
-                allArchive[currentSubject].push(question);
-                saveArchive(allArchive);
-                showNotification('Soalan berjaya diarkibkan!', 'success');
-                
-                // Update archive display
-                loadArchiveData();
-            } else {
-                showNotification('Soalan sudah berada dalam arkib!', 'warning');
-            }
-        }
-
-        // Show notification
-        function showNotification(message, type = 'info') {
-            // Remove existing notification
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
-            }
-            
-            // Create notification
+        function showNotification(message) {
+            // Create notification element
             const notification = document.createElement('div');
-            notification.className = `notification ${type}`;
             notification.style.cssText = `
                 position: fixed;
                 top: 20px;
                 right: 20px;
-                background-color: ${type === 'success' ? '#2ecc71' : type === 'warning' ? '#f39c12' : '#3498db'};
+                background-color: var(--success);
                 color: white;
                 padding: 15px 20px;
-                border-radius: 8px;
+                border-radius: 10px;
                 box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-                z-index: 10000;
-                font-weight: 600;
-                display: flex;
-                align-items: center;
-                gap: 10px;
+                z-index: 3000;
                 animation: slideIn 0.3s ease;
             `;
-            
-            notification.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'warning' ? 'exclamation-triangle' : 'info-circle'}"></i>
-                <span>${message}</span>
-            `;
+            notification.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
             
             document.body.appendChild(notification);
             
@@ -2960,13 +1369,11 @@
             setTimeout(() => {
                 notification.style.animation = 'slideOut 0.3s ease';
                 setTimeout(() => {
-                    if (notification.parentNode) {
-                        notification.parentNode.removeChild(notification);
-                    }
+                    notification.remove();
                 }, 300);
             }, 3000);
             
-            // Add CSS for animations
+            // Add animation styles if not already present
             if (!document.querySelector('#notification-styles')) {
                 const style = document.createElement('style');
                 style.id = 'notification-styles';
@@ -2983,281 +1390,6 @@
                 document.head.appendChild(style);
             }
         }
-
-        // Setup simbol matematik
-        function setupMathSymbols(questionId) {
-            const mathSymbolsDiv = document.getElementById(`mathSymbols${questionId}`);
-            if (mathSymbolsDiv) {
-                mathSymbolsDiv.addEventListener('click', (e) => {
-                    if (e.target.classList.contains('symbol-btn')) {
-                        const symbol = e.target.dataset.symbol;
-                        const answerTextarea = document.getElementById(`answer${questionId}`);
-                        const mathAnswerTextarea = document.getElementById(`mathAnswer${questionId}`);
-                        const activeTextarea = document.activeElement;
-                        
-                        // Tentukan textarea yang aktif
-                        let targetTextarea = answerTextarea;
-                        if (activeTextarea === mathAnswerTextarea) {
-                            targetTextarea = mathAnswerTextarea;
-                        }
-                        
-                        if (targetTextarea) {
-                            // Dapatkan posisi kursor
-                            const start = targetTextarea.selectionStart;
-                            const end = targetTextarea.selectionEnd;
-                            
-                            // Masukkan simbol pada posisi kursor
-                            targetTextarea.value = targetTextarea.value.substring(0, start) + 
-                                                  symbol + 
-                                                  targetTextarea.value.substring(end);
-                            
-                            // Update jawapan dalam storage
-                            if (targetTextarea === answerTextarea) {
-                                currentAnswers[questionId] = {
-                                    ...currentAnswers[questionId],
-                                    answer: targetTextarea.value
-                                };
-                            } else {
-                                currentAnswers[questionId] = {
-                                    ...currentAnswers[questionId],
-                                    mathAnswer: targetTextarea.value
-                                };
-                            }
-                            
-                            // Fokus semula dan letakkan kursor selepas simbol
-                            targetTextarea.focus();
-                            targetTextarea.selectionStart = targetTextarea.selectionEnd = start + symbol.length;
-                            
-                            // Berikan feedback visual
-                            e.target.style.backgroundColor = currentTingkatan === '4' ? '#e91e63' : '#4CAF50';
-                            e.target.style.color = 'white';
-                            setTimeout(() => {
-                                e.target.style.backgroundColor = '';
-                                e.target.style.color = '';
-                            }, 200);
-                        }
-                    }
-                });
-            }
-            
-            // Setup event listener untuk butang kosongkan
-            const clearAnswerBtn = document.getElementById(`clearAnswer${questionId}`);
-            if (clearAnswerBtn) {
-                clearAnswerBtn.addEventListener('click', () => {
-                    const answerTextarea = document.getElementById(`answer${questionId}`);
-                    if (answerTextarea) {
-                        answerTextarea.value = '';
-                        currentAnswers[questionId] = {
-                            ...currentAnswers[questionId],
-                            answer: ''
-                        };
-                        answerTextarea.focus();
-                    }
-                });
-            }
-            
-            const clearMathAnswerBtn = document.getElementById(`clearMathAnswer${questionId}`);
-            if (clearMathAnswerBtn) {
-                clearMathAnswerBtn.addEventListener('click', () => {
-                    const mathAnswerTextarea = document.getElementById(`mathAnswer${questionId}`);
-                    if (mathAnswerTextarea) {
-                        mathAnswerTextarea.value = '';
-                        currentAnswers[questionId] = {
-                            ...currentAnswers[questionId],
-                            mathAnswer: ''
-                        };
-                        mathAnswerTextarea.focus();
-                    }
-                });
-            }
-        }
-
-        // Simpan jawapan semasa
-        function saveCurrentAnswer() {
-            const subjectQuestions = questions[currentSubject] || [];
-            if (subjectQuestions.length === 0) return;
-            
-            const currentQuestion = subjectQuestions[currentQuestionIndex];
-            if (!currentQuestion) return;
-            
-            const answerTextarea = document.getElementById(`answer${currentQuestion.id}`);
-            const mathAnswerTextarea = document.getElementById(`mathAnswer${currentQuestion.id}`);
-            
-            if (answerTextarea) {
-                currentAnswers[currentQuestion.id] = {
-                    answer: answerTextarea.value,
-                    mathAnswer: mathAnswerTextarea ? mathAnswerTextarea.value : '',
-                    timestamp: new Date().toISOString()
-                };
-            }
-        }
-
-        // Update UI soalan
-        function updateQuestionUI() {
-            const subjectQuestions = questions[currentSubject] || [];
-            const total = subjectQuestions.length;
-            const questionCount = document.getElementById('questionCount');
-            const currentQuestionNum = document.getElementById('currentQuestionNum');
-            const totalQuestions = document.getElementById('totalQuestions');
-            const progressFill = document.getElementById('progressFill');
-            const prevQuestionBtn = document.getElementById('prevQuestion');
-            const nextQuestionBtn = document.getElementById('nextQuestion');
-            
-            if (total > 0) {
-                if (questionCount) questionCount.textContent = `Soalan ${currentQuestionIndex + 1} daripada ${total}`;
-                if (currentQuestionNum) currentQuestionNum.textContent = `Soalan ${currentQuestionIndex + 1}`;
-                if (totalQuestions) totalQuestions.textContent = `daripada ${total}`;
-                if (progressFill) progressFill.style.width = `${((currentQuestionIndex + 1) / total) * 100}%`;
-                
-                if (prevQuestionBtn) prevQuestionBtn.disabled = currentQuestionIndex === 0;
-                if (nextQuestionBtn) nextQuestionBtn.disabled = currentQuestionIndex === total - 1;
-            } else {
-                if (questionCount) questionCount.textContent = 'Tiada soalan';
-                if (prevQuestionBtn) prevQuestionBtn.disabled = true;
-                if (nextQuestionBtn) nextQuestionBtn.disabled = true;
-            }
-        }
-
-        // Load questions list for management
-        function loadQuestionsList() {
-            const allQuestions = getQuestions();
-            const filterTingkatan = document.getElementById('filterTingkatan').value;
-            const filterSubject = document.getElementById('filterSubject').value;
-            const filterDate = document.getElementById('filterDate').value;
-            
-            const questionsList = document.getElementById('questionsList');
-            const noQuestionsMessage = document.getElementById('noQuestionsMessage');
-            
-            if (!questionsList) return;
-            
-            questionsList.innerHTML = '';
-            
-            // Get all questions
-            let allQuestionsList = [];
-            Object.keys(allQuestions).forEach(subject => {
-                allQuestions[subject].forEach(question => {
-                    allQuestionsList.push({
-                        ...question,
-                        subject: subject
-                    });
-                });
-            });
-            
-            // Apply filters
-            if (filterTingkatan !== 'all') {
-                allQuestionsList = allQuestionsList.filter(q => q.tingkatan == filterTingkatan);
-            }
-            
-            if (filterSubject !== 'all') {
-                allQuestionsList = allQuestionsList.filter(q => q.subject === filterSubject);
-            }
-            
-            if (filterDate) {
-                allQuestionsList = allQuestionsList.filter(q => q.date === filterDate);
-            }
-            
-            if (allQuestionsList.length === 0) {
-                noQuestionsMessage.style.display = 'block';
-                return;
-            }
-            
-            noQuestionsMessage.style.display = 'none';
-            
-            // Display questions
-            allQuestionsList.forEach((question, index) => {
-                const questionItem = document.createElement('div');
-                questionItem.className = 'question-list-item';
-                questionItem.innerHTML = `
-                    <h4>${question.text.substring(0, 100)}${question.text.length > 100 ? '...' : ''}</h4>
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
-                        <div>
-                            <small style="color: #6c757d;">
-                                <i class="fas fa-calendar-alt"></i> ${formatDate(question.date)} | 
-                                <i class="fas fa-book"></i> ${question.subject} | 
-                                <i class="fas fa-star"></i> ${question.marks} markah
-                            </small>
-                        </div>
-                        <div>
-                            <button class="btn btn-sm btn-primary edit-question" data-id="${question.id}" data-subject="${question.subject}">
-                                <i class="fas fa-edit"></i> Edit
-                            </button>
-                            <button class="btn btn-sm btn-danger delete-question" data-id="${question.id}" data-subject="${question.subject}">
-                                <i class="fas fa-trash"></i> Padam
-                            </button>
-                        </div>
-                    </div>
-                `;
-                
-                questionsList.appendChild(questionItem);
-            });
-            
-            // Add event listeners for edit and delete buttons
-            document.querySelectorAll('.edit-question').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const questionId = this.dataset.id;
-                    const subject = this.dataset.subject;
-                    editQuestion(questionId, subject);
-                });
-            });
-            
-            document.querySelectorAll('.delete-question').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const questionId = this.dataset.id;
-                    const subject = this.dataset.subject;
-                    deleteQuestion(questionId, subject);
-                });
-            });
-        }
-
-        // Edit question
-        function editQuestion(questionId, subject) {
-            const allQuestions = getQuestions();
-            const question = allQuestions[subject]?.find(q => q.id == questionId);
-            
-            if (!question) return;
-            
-            // Fill form with question data
-            document.getElementById('editQuestionId').value = questionId;
-            document.getElementById('questionTingkatan').value = question.tingkatan;
-            document.getElementById('questionSubject').value = subject;
-            document.getElementById('questionDate').value = question.date;
-            document.getElementById('questionText').value = question.text;
-            document.getElementById('questionAnswer').innerHTML = question.answer;
-            document.getElementById('questionMarks').value = question.marks;
-            document.getElementById('questionTags').value = question.tags?.join(', ') || '';
-            
-            document.getElementById('addQuestionModal').style.display = 'block';
-        }
-
-        // Delete question
-        function deleteQuestion(questionId, subject) {
-            if (!confirm('Adakah anda pasti ingin memadam soalan ini?')) {
-                return;
-            }
-            
-            const allQuestions = getQuestions();
-            if (allQuestions[subject]) {
-                allQuestions[subject] = allQuestions[subject].filter(q => q.id != questionId);
-                saveQuestions(allQuestions);
-                loadQuestionsList();
-                showNotification('Soalan berjaya dipadam!', 'success');
-                
-                // Reload current questions if needed
-                if (currentSubject === subject) {
-                    loadQuestionsForSubject(subject);
-                }
-            }
-        }
-
-        // Force initialization jika ada masalah
-        setTimeout(function() {
-            console.log('Force checking app initialization...');
-            if (typeof currentTingkatan === 'undefined') {
-                console.log('Re-initializing app...');
-                initApp();
-            }
-        }, 2000);
-
     </script>
 </body>
 </html>
